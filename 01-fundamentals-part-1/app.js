@@ -433,11 +433,11 @@ let markWeight = 78;
 const johnBMI = johnWeight / (johnHeight * johnHeight);
 const markBMI = markWeight / (markHeight * markHeight);
 
-console.log("John BMI " + johnBMI);
-console.log("Mark BMI " + markBMI);
+// console.log("John BMI " + johnBMI);
+// console.log("Mark BMI " + markBMI);
 
 const markHigherBMI = markBMI > johnBMI;
-console.log(markHigherBMI);
+// console.log(markHigherBMI);
 
 
 // String and Template Literals
@@ -446,10 +446,10 @@ let myage = 23;
 let job = "Developer";
 
 let myData = "I'm " + myname + ", also my age is " + myage + " years old, and i'm a " + job;
-console.log(myData);
+// console.log(myData);
 
 let myNewData = `I'm ${myname}, also my age is ${myage} years old, and i'm a ${job}`;
-console.log(myNewData);
+// console.log(myNewData);
 
 let name = "Hash";
 // let age = 23;
@@ -463,24 +463,24 @@ let mycountry = "Pakistan";
 
 // Output:
 // I live in Karachi, Pakistan.
-console.log(`I live in ${city}, ${mycountry}`);
+// console.log(`I live in ${city}, ${mycountry}`);
 
 let a = 5;
 let b = 10;
 
 // Output:
 // The sum of 5 and 10 is 15.
-console.log(`The sum of ${a} and ${b} is ${a + b}`);
+// console.log(`The sum of ${a} and ${b} is ${a + b}`);
 
 let x = 8;
 let y = 3;
 
 // Output:
 // 8 * 3 = 24
-console.log(`${x} * ${y} = ${x * y}`);
+// console.log(`${x} * ${y} = ${x * y}`);
 
 let birthYear = 2002;
-console.log(`You are ${currentYear - birthYear} years old!`);
+// console.log(`You are ${currentYear - birthYear} years old!`);
 
 // let price = 500;
 let discount = 20;
@@ -494,9 +494,9 @@ let discount = 20;
 // Welcome to JavaScript.
 // Happy Coding!
 
-console.log(`Hello Hashim
-    Welcom to JavaScript.
-    Happy Coding!`);
+// console.log(`Hello Hashim
+//     Welcom to JavaScript.
+//     Happy Coding!`);
 
 let product = "Laptop";
 // let price = 120000;
@@ -510,7 +510,7 @@ let age = 17;
 // You are an adult.
 // OR
 // You are not an adult.
-console.log(`${age >= 18 ? "You are an adult!" : "You are not adult!"}`);
+// console.log(`${age >= 18 ? "You are an adult!" : "You are not adult!"}`);
 
 let score = 82;
 
@@ -518,7 +518,7 @@ let score = 82;
 // You passed the exam.
 // OR
 // You failed the exam.
-console.log(`${score >= 50 ? "You passed the exam!" : "You failed the exam!"}`);
+// console.log(`${score >= 50 ? "You passed the exam!" : "You failed the exam!"}`);
 
 let item = "Shoes";
 let quantity = 2;
@@ -526,4 +526,158 @@ let price = 3000;
 
 // Output:
 // You bought 2 Shoes for a total of 6000 PKR.
-console.log(`You bought ${quantity} ${item} for a total of ${price} PKR.`);
+// console.log(`You bought ${quantity} ${item} for a total of ${price} PKR.`);
+
+// Taking Decisions: if / else statements
+
+const USER_AGE = 12;
+const isOldEnough = USER_AGE >= 18;
+if (isOldEnough) {
+    console.log("Hashim now you can drive!");
+} else {
+    const yearsLeft = 18 - USER_AGE;
+    console.log(`Hashim you are so young ${yearsLeft} years left for drive`);
+}
+
+const userBirthYear = 2000;
+let century;
+if (userBirthYear >= 2000) {
+    century = 21;
+} else {
+    century = 20;
+}
+console.log(century);
+
+let my_age = 23;
+// agar age >= 18
+// print: "You can vote"
+// warna: "You cannot vote"
+if (my_age >= 18) {
+    console.log(`You can Vote!`);
+} else {
+    console.log(`You cannot Vote!`);
+}
+
+let temperature = 35;
+
+// agar temperature > 30
+// print: "It's hot"
+// warna: "It's normal"
+
+if (temperature > 30) {
+    console.log("It's hot");
+} else {
+    console.log("It's normal");
+}
+
+let number = 2;
+
+// agar number positive
+// print: "Positive"
+// warna: "Negative"
+if (number > 0) {
+    console.log("Positive");
+} else if (number < 0) {
+    console.log("Negative");
+} else {
+    console.log("Zero");
+}
+
+let userScore = 99;
+let grade;
+// >= 90 → "A grade"
+// >= 70 → "B grade"
+// >= 50 → "C grade"
+// warna → "Fail"
+if (userScore >= 90) {
+    grade = "A";
+} else if (userScore >= 70) {
+    grade = "B";
+} else if (userScore >= 50) {
+    grade = "C";
+} else {
+    grade = "Fail";
+}
+console.log(grade);
+
+let bmi = 14;
+
+// < 18.5 → "Underweight"
+// 18.5 - 24.9 → "Normal"
+// 25 - 29.9 → "Overweight"
+// >= 30 → "Obese"
+if (bmi < 18.5) {
+    console.log("Underweight");
+} else if (bmi >= 1.85 && bmi <= 24.9) {
+    console.log("Normal");
+} else if (bmi >= 25 && bmi <= 29.9) {
+    console.log("Overweight");
+} else {
+    console.log("Obese");
+}
+
+let my$age = 23;
+let hasID = true;
+
+// age >= 18 AND hasID
+// → "Entry allowed"
+// warna → "Entry denied"
+if (my$age >= 18 && hasID) {
+    console.log("Entry Allowed");
+} else {
+    console.log("Entry Denied");
+}
+
+let isLoggedIn = true;
+let isAdmin = false;
+
+// agar logged in YA admin
+// → "Access granted"
+// warna → "Access denied"
+if (isLoggedIn && isAdmin) {
+    console.log("Acces Granted");
+} else {
+    console.log("Acces Denied");
+}
+
+let userValue = "10";
+
+// agar value == 10
+// print something
+// agar value === 10
+// print something else
+
+let my_score = "75";
+console.log(my_score);
+
+// pehle number mein convert karo
+// phir pass/fail decision lo (>= 50 pass)
+
+my_score = Number("99");
+console.log(my_score);
+
+if (my_score >= 50) {
+    console.log("pass");
+} else {
+    console.log("fail");
+}
+
+// CHALLENGE #2
+
+// Use the BMI example from Challenge #1, and the code you already wrote, and improve it:
+
+// 1. Print a nice output to the console, telling the user who has the higher BMI. The message can be either:
+
+// "Mark's BMI is higher than John's!" or "John's BMI is higher than Mark's!".
+
+// 2. Modify the outputs above to use template literals to include the BMI values in the outputs.
+
+// Example: "Mark's BMI (28.3) is higher than John's (23.9)!" or "John's BMI (29.1) is higher than Mark's (27)!".
+
+// Note: Don't round the BMI values. Leave them as they are.
+
+if (markBMI > johnBMI) {
+    console.log(`Mark's BMI (${markBMI}) is higher thaan John's (${johnBMI})`);
+} else {
+    console.log(`John's BMI (${johnBMI}) is higher thaan Mark's (${markBMI})`);
+}
