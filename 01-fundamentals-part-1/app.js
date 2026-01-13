@@ -677,7 +677,7 @@ if (my_score >= 50) {
 // Note: Don't round the BMI values. Leave them as they are.
 
 if (markBMI > johnBMI) {
-    console.log(`Mark's BMI (${markBMI}) is higher thaan John's (${johnBMI})`);
+    console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})`);
 } else {
-    console.log(`John's BMI (${johnBMI}) is higher thaan Mark's (${markBMI})`);
+    console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})`);
 }
