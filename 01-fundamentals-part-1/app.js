@@ -315,11 +315,11 @@ z--; //  z = z - 1
 
 const num1 = 10;
 const num2 = 5;
-console.log(num1 + num2);
-console.log(num1 - num2);
-console.log(num1 * num2);
-console.log(num1 / num2);
-console.log(num1 % num2);
+// console.log(num1 + num2);
+// console.log(num1 - num2);
+// console.log(num1 * num2);
+// console.log(num1 / num2);
+// console.log(num1 % num2);
 
 let num = 10;
 // Pre-increment
@@ -327,25 +327,25 @@ let num = 10;
 // Pre-decrement
 // Post-decrement
 // Log after each operation
-console.log(num);
+// console.log(num);
 ++num;
-console.log(num);
+// console.log(num);
 num++;
-console.log(num);
+// console.log(num);
 --num;
-console.log(num);
+// console.log(num);
 num--;
-console.log(num);
+// console.log(num);
 
 let val = 4;
 // val ka square
 // val ka cube
 // Math.sqrt(val)
 val **= 2; // val = val ** 2
-console.log(val);
+// console.log(val);
 val **= 3; // val = val ** 3
-console.log(val);
-console.log(Math.sqrt(val));
+// console.log(val);
+// console.log(Math.sqrt(val));
 
 let value = 10;
 // value += 5
@@ -353,42 +353,56 @@ let value = 10;
 // value *= 2
 // value /= 4
 // Log after each operation
-console.log(value);
+// console.log(value);
 value += 10;
-console.log(value);
+// console.log(value);
 value -= 3;
-console.log(value);
+// console.log(value);
 value *= 2;
-console.log(value);
+// console.log(value);
 value /= 4;
-console.log(value);
+// console.log(value);
 
 let data = 20;
 data += 5; // 25
-console.log(data);
+// console.log(data);
 data *= 2; // 50
-console.log(data);
+// console.log(data);
 data -= 10; // 40
-console.log(data); // Predict before running
+// console.log(data); // Predict before running
 
 let val1 = 10;
 let val2 = 20;
-console.log(val1 > val2); // false
-console.log(val1 < val2); // true
-console.log(val1 >= 10); // true
-console.log(val1 <= val2); // true
-console.log(val1 == "10"); //s true
-console.log(val1 === "10"); // false // Strict equality
-console.log(val1 != val2); // true
-console.log(val1 !== "10"); // true // Strict inequality
+// console.log(val1 > val2); // false
+// console.log(val1 < val2); // true
+// console.log(val1 >= 10); // true
+// console.log(val1 <= val2); // true
+// console.log(val1 == "10"); //s true
+// console.log(val1 === "10"); // false // Strict equality
+// console.log(val1 != val2); // true
+// console.log(val1 !== "10"); // true // Strict inequality
 
-console.log("5" == 5);   // true
-console.log("5" === 5);  // false
-console.log(0 == false); // true
-console.log(0 === false);// false
-console.log(null == undefined); // true
-console.log(null === undefined);// false
+// console.log("5" == 5);   // true
+// console.log("5" === 5);  // false
+// console.log(0 == false); // true
+// console.log(0 === false);// false
+// console.log(null == undefined); // true
+// console.log(null === undefined);// false
+
+// Operator Precedence
 
 let abc, xyz;
 abc = xyz = 20 - 10 - 5;
 console.log(abc, xyz);
+
+console.log(5 + 3 * 2); // 11
+console.log((5 + 3) * 2); // 16
+console.log((10 - 4) / 2); // 3
+console.log(5 + 5 > 9); // true
+
+console.log(5 + 3 == "8"); // true
+console.log(5 + 3 === "8"); // false
+
+let newVal = 10;
+newVal += 5 * 2;
+console.log(newVal);
