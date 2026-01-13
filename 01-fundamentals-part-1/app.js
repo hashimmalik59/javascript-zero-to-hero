@@ -122,8 +122,8 @@ spouseName = "xyz";
 
 // Variables: firstName = "Hash", lastName = "Imran"
 // Create a sentence using + and template literals: "My name is Hash Imran."
-let firstName = "Hashim";
-let lastName = "Malik";
+// let firstName = "Hashim";
+// let lastName = "Malik";
 // console.log(`My name is ${firstName + " " + lastName}`);
 
 // Create a variable for Celsius
@@ -215,60 +215,180 @@ numbers.push(6);
 var a = 1;
 let b = 2;
 const c = 3;
-console.log(a);
-console.log(b);
-console.log(c);
+// console.log(a);
+// console.log(b);
+// console.log(c);
 
 // let variable banao aur uski value change karo
 // const variable banao aur change karne ki koshish karo (error dekho)
 
 let goodName = "abc";
 goodName = "Hashim";
-console.log(goodName);
+// console.log(goodName);
 
 const caste = "Malik";
 // caste = "Awan"; // Uncaught TypeError: Invalid assignment to const 'caste'
-console.log(caste);
+// console.log(caste);
 
 const username = "Hashim";
 let userage = 23;
 let userCity = "Peshawar";
-console.log(username, userage, userCity);
+// console.log(username, userage, userCity);
 
 userage = userage + 1;
 userCity = "Islamabad";
-console.log(username, userage, userCity);
+// console.log(username, userage, userCity);
 
 // let count = 0;
 // count ko 3 dafa increase karo
 // final value log karo
 let count = 0;
-console.log(count);
+// console.log(count);
 count = count + 1;
 count = count + 1;
 count = count + 1;
-console.log(count);
+// console.log(count);
 
 
 // const API_KEY = "abc123";
 // try to change it and observe error
 const API_KEY = "abc123";
 // API_KEY = "xyz123"; // Uncaught TypeError: invalid assignment to const 'API_KEY'
-console.log(API_KEY);
+// console.log(API_KEY);
 
 const arr = [1, 2, 3];
 // push new value
 // reassign array
-console.log(arr);
+// console.log(arr);
 arr.push(4);
-console.log(arr);
+// console.log(arr);
 
+// Use const where possible
+// Use let where value changes
+// Avoid var completely
 
+// Create:
+// userName
+// score
+// isLoggedIn
+// Update score
+// Log final message using template literal
 const userObj = {
     username: "Hashim",
     score: 99,
     isLoggedIn: true,
 }
-console.log(userObj);
+// console.log(userObj);
 userObj.score = 100;
-console.log(userObj);
+// console.log(userObj);
+// console.log(`Username is ${userObj.username}, also his score is ${userObj.score}, and right now our user ${userObj.username} is log in.`);
+
+// Basic Operators
+
+const currentYear = 2026
+const ageHashim = currentYear - 2002;
+const ageAbdullah = currentYear - 2003;
+// console.log(ageHashim, ageAbdullah);
+
+const firstName = "Hashim";
+const lastName = "Malik";
+// console.log(firstName + " " + lastName);
+
+// Assigment Operators
+let z = 10 + 5; // 15
+z += 10; // z = z + 10 = 25
+z++; //  z = z + 1
+z--; //  z = z - 1
+// console.log(z); // 25
+
+// Comparison Operators
+// console.log(ageHashim > ageAbdullah); // 24 > 23 = true
+// console.log(ageHashim >= 30); // 24 >= 30
+// console.log(ageHashim < 30); // 24 < 30
+// console.log(ageHashim <= 30); // 24 <= 30
+
+// console.log(currentYear - ageHashim > currentYear - ageAbdullah); // first mathematical operation and then comparison => false
+
+// Create two variables a = 10, b = 5
+// Perform +, -, *, /, %
+// Log all results
+
+const num1 = 10;
+const num2 = 5;
+console.log(num1 + num2);
+console.log(num1 - num2);
+console.log(num1 * num2);
+console.log(num1 / num2);
+console.log(num1 % num2);
+
+let num = 10;
+// Pre-increment
+// Post-increment
+// Pre-decrement
+// Post-decrement
+// Log after each operation
+console.log(num);
+++num;
+console.log(num);
+num++;
+console.log(num);
+--num;
+console.log(num);
+num--;
+console.log(num);
+
+let val = 4;
+// val ka square
+// val ka cube
+// Math.sqrt(val)
+val **= 2; // val = val ** 2
+console.log(val);
+val **= 3; // val = val ** 3
+console.log(val);
+console.log(Math.sqrt(val));
+
+let value = 10;
+// value += 5
+// value -= 3
+// value *= 2
+// value /= 4
+// Log after each operation
+console.log(value);
+value += 10;
+console.log(value);
+value -= 3;
+console.log(value);
+value *= 2;
+console.log(value);
+value /= 4;
+console.log(value);
+
+let data = 20;
+data += 5; // 25
+console.log(data);
+data *= 2; // 50
+console.log(data);
+data -= 10; // 40
+console.log(data); // Predict before running
+
+let val1 = 10;
+let val2 = 20;
+console.log(val1 > val2); // false
+console.log(val1 < val2); // true
+console.log(val1 >= 10); // true
+console.log(val1 <= val2); // true
+console.log(val1 == "10"); //s true
+console.log(val1 === "10"); // false // Strict equality
+console.log(val1 != val2); // true
+console.log(val1 !== "10"); // true // Strict inequality
+
+console.log("5" == 5);   // true
+console.log("5" === 5);  // false
+console.log(0 == false); // true
+console.log(0 === false);// false
+console.log(null == undefined); // true
+console.log(null === undefined);// false
+
+let abc, xyz;
+abc = xyz = 20 - 10 - 5;
+console.log(abc, xyz);
