@@ -15,7 +15,7 @@
 // name => Box
 // Hashim => Item
 
-let name = "Hashim";
+// let name = "Hashim";
 // console.log(name);
 
 // Varaibles & Values
@@ -90,8 +90,8 @@ let itemPrice = 400;
 let item2Price = 600;
 let item3Price = 800;
 let totalPriceOfItems = itemPrice + item2Price + item3Price;
-let discount = totalPriceOfItems * 20 / 100;
-let newPrice = totalPriceOfItems - discount;
+// let discount = totalPriceOfItems * 20 / 100;
+// let newPrice = totalPriceOfItems - discount;
 // console.log(totalPriceOfItems);
 // console.log("Total price after discount is " + newPrice);
 
@@ -106,7 +106,7 @@ let nightHabit = "Journaling";
 
 // Datatypes
 let fullName = "Hashim Malik";
-let age = 23;
+// let age = 23;
 let isStudent = true;
 let deathDate;
 let spouseName = null;
@@ -116,7 +116,7 @@ let bigNum = 12345678910111213n
 // age ko increment karo
 // isStudent ko false karo
 // car ko "Toyota" assign karo
-++age;
+// ++age;
 isStudent = false;
 spouseName = "xyz";
 
@@ -167,12 +167,12 @@ if (userAge >= 18) {
 // let y = 200; Convert to string and concatenate with "50"
 
 
-let x = "100";
-x = Number("100");
-x = x + 50;
+// let x = "100";
+// x = Number("100");
+// x = x + 50;
 // console.log(x);
-let y = 200;
-y = String(y);
+// let y = 200;
+// y = String(y);
 // console.log(y + "50");
 
 // weight in kg, height in meter
@@ -212,9 +212,9 @@ numbers.push(6);
 // var, let, const use karke 3 variables banao
 // teeno ko console.log karo
 
-var a = 1;
-let b = 2;
-const c = 3;
+// var a = 1;
+// let b = 2;
+// const c = 3;
 // console.log(a);
 // console.log(b);
 // console.log(c);
@@ -393,16 +393,137 @@ let val2 = 20;
 
 let abc, xyz;
 abc = xyz = 20 - 10 - 5;
-console.log(abc, xyz);
+// console.log(abc, xyz);
 
-console.log(5 + 3 * 2); // 11
-console.log((5 + 3) * 2); // 16
-console.log((10 - 4) / 2); // 3
-console.log(5 + 5 > 9); // true
+// console.log(5 + 3 * 2); // 11
+// console.log((5 + 3) * 2); // 16
+// console.log((10 - 4) / 2); // 3
+// console.log(5 + 5 > 9); // true
 
-console.log(5 + 3 == "8"); // true
-console.log(5 + 3 === "8"); // false
+// console.log(5 + 3 == "8"); // true
+// console.log(5 + 3 === "8"); // false
 
 let newVal = 10;
 newVal += 5 * 2;
-console.log(newVal);
+// console.log(newVal);
+
+// JavaScript Fundamentals – Part 1
+// Coding Challenge #1
+// Mark and John are trying to compare their BMI(Body Mass Index), which is
+// calculated using the formula:
+//     BMI = mass / height ** 2 = mass / (height * height) (mass in kg
+// and height in meter).
+// Your tasks:
+// 1. Store Mark's and John's mass and height in variables
+// 2. Calculate both their BMIs using the formula (you can even implement both
+// versions)
+// 3. Create a Boolean variable 'markHigherBMI' containing information about
+// whether Mark has a higher BMI than John.
+// Test data:
+// § Data 1: Marks weights 78 kg and is 1.69 m tall.John weights 92 kg and is 1.95
+// m tall.
+// § Data 2: Marks weights 95 kg and is 1.88 m tall.John weights 85 kg and is 1.76
+// m tall
+
+let johnHeight = 1.95;
+let markHeight = 1.69;
+let johnWeight = 92;
+let markWeight = 78;
+
+const johnBMI = johnWeight / (johnHeight * johnHeight);
+const markBMI = markWeight / (markHeight * markHeight);
+
+console.log("John BMI " + johnBMI);
+console.log("Mark BMI " + markBMI);
+
+const markHigherBMI = markBMI > johnBMI;
+console.log(markHigherBMI);
+
+
+// String and Template Literals
+let myname = "Hashim";
+let myage = 23;
+let job = "Developer";
+
+let myData = "I'm " + myname + ", also my age is " + myage + " years old, and i'm a " + job;
+console.log(myData);
+
+let myNewData = `I'm ${myname}, also my age is ${myage} years old, and i'm a ${job}`;
+console.log(myNewData);
+
+let name = "Hash";
+// let age = 23;
+
+// Output:
+// My name is Hash and I am 23 years old.
+// console.log(`My name is ${name} and I am ${age} years old.`);
+
+let city = "Karachi";
+let mycountry = "Pakistan";
+
+// Output:
+// I live in Karachi, Pakistan.
+console.log(`I live in ${city}, ${mycountry}`);
+
+let a = 5;
+let b = 10;
+
+// Output:
+// The sum of 5 and 10 is 15.
+console.log(`The sum of ${a} and ${b} is ${a + b}`);
+
+let x = 8;
+let y = 3;
+
+// Output:
+// 8 * 3 = 24
+console.log(`${x} * ${y} = ${x * y}`);
+
+let birthYear = 2002;
+console.log(`You are ${currentYear - birthYear} years old!`);
+
+// let price = 500;
+let discount = 20;
+
+// Output:
+// Final price after discount is 400
+// console.log(`Final price after discount is ${price * .8}`);
+
+// Use template literals to print:
+// Hello Hash,
+// Welcome to JavaScript.
+// Happy Coding!
+
+console.log(`Hello Hashim
+    Welcom to JavaScript.
+    Happy Coding!`);
+
+let product = "Laptop";
+// let price = 120000;
+
+// Multiline invoice using template literals
+// console.log(`User purachse ${product}
+// and its price is ${price}`);
+
+let age = 17;
+// Output:
+// You are an adult.
+// OR
+// You are not an adult.
+console.log(`${age >= 18 ? "You are an adult!" : "You are not adult!"}`);
+
+let score = 82;
+
+// Output:
+// You passed the exam.
+// OR
+// You failed the exam.
+console.log(`${score >= 50 ? "You passed the exam!" : "You failed the exam!"}`);
+
+let item = "Shoes";
+let quantity = 2;
+let price = 3000;
+
+// Output:
+// You bought 2 Shoes for a total of 6000 PKR.
+console.log(`You bought ${quantity} ${item} for a total of ${price} PKR.`);
