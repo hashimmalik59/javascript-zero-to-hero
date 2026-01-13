@@ -48,8 +48,8 @@ myCountry = "USA";
 // Try to change it (should give error)
 
 const myBirthYear = 2002;
-// myBirthYear = myBirthYear + 1;
-// console.log(myBirthYear); // TypeError: Assignment to constant variable.
+// myBirthYear = myBirthYear + 1; // TypeError: Assignment to constant variable.
+// console.log(myBirthYear);
 
 // Combine name and country into sentence: "My name is ___ and I live in ___"
 // console.log("My name is " + myName + " and my country is " + myCountry);
@@ -196,11 +196,79 @@ let person = {
 }
 const numbers = [1, 2, 3, 4, 5];
 
-console.log(person);
-console.log(numbers);
+// console.log(person);
+// console.log(numbers);
 
 person.isStudent = true;
 numbers.push(6);
 
-console.log(person);
-console.log(numbers);
+// console.log(person);
+// console.log(numbers);
+
+/////////////////////////////////////
+
+// let, var, and const 
+
+// var, let, const use karke 3 variables banao
+// teeno ko console.log karo
+
+var a = 1;
+let b = 2;
+const c = 3;
+console.log(a);
+console.log(b);
+console.log(c);
+
+// let variable banao aur uski value change karo
+// const variable banao aur change karne ki koshish karo (error dekho)
+
+let goodName = "abc";
+goodName = "Hashim";
+console.log(goodName);
+
+const caste = "Malik";
+// caste = "Awan"; // Uncaught TypeError: Invalid assignment to const 'caste'
+console.log(caste);
+
+const username = "Hashim";
+let userage = 23;
+let userCity = "Peshawar";
+console.log(username, userage, userCity);
+
+userage = userage + 1;
+userCity = "Islamabad";
+console.log(username, userage, userCity);
+
+// let count = 0;
+// count ko 3 dafa increase karo
+// final value log karo
+let count = 0;
+console.log(count);
+count = count + 1;
+count = count + 1;
+count = count + 1;
+console.log(count);
+
+
+// const API_KEY = "abc123";
+// try to change it and observe error
+const API_KEY = "abc123";
+// API_KEY = "xyz123"; // Uncaught TypeError: invalid assignment to const 'API_KEY'
+console.log(API_KEY);
+
+const arr = [1, 2, 3];
+// push new value
+// reassign array
+console.log(arr);
+arr.push(4);
+console.log(arr);
+
+
+const userObj = {
+    username: "Hashim",
+    score: 99,
+    isLoggedIn: true,
+}
+console.log(userObj);
+userObj.score = 100;
+console.log(userObj);
