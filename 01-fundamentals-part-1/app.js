@@ -536,7 +536,7 @@ if (isOldEnough) {
     console.log("Hashim now you can drive!");
 } else {
     const yearsLeft = 18 - USER_AGE;
-    console.log(`Hashim you are so young ${yearsLeft} years left for drive`);
+    // console.log(`Hashim you are so young ${yearsLeft} years left for drive`);
 }
 
 const userBirthYear = 2000;
@@ -546,14 +546,14 @@ if (userBirthYear >= 2000) {
 } else {
     century = 20;
 }
-console.log(century);
+// console.log(century);
 
 let my_age = 23;
 // agar age >= 18
 // print: "You can vote"
 // warna: "You cannot vote"
 if (my_age >= 18) {
-    console.log(`You can Vote!`);
+    // console.log(`You can Vote!`);
 } else {
     console.log(`You cannot Vote!`);
 }
@@ -565,7 +565,7 @@ let temperature = 35;
 // warna: "It's normal"
 
 if (temperature > 30) {
-    console.log("It's hot");
+    // console.log("It's hot");
 } else {
     console.log("It's normal");
 }
@@ -576,7 +576,7 @@ let number = 2;
 // print: "Positive"
 // warna: "Negative"
 if (number > 0) {
-    console.log("Positive");
+    // console.log("Positive");
 } else if (number < 0) {
     console.log("Negative");
 } else {
@@ -598,7 +598,7 @@ if (userScore >= 90) {
 } else {
     grade = "Fail";
 }
-console.log(grade);
+// console.log(grade);
 
 let bmi = 14;
 
@@ -607,13 +607,13 @@ let bmi = 14;
 // 25 - 29.9 → "Overweight"
 // >= 30 → "Obese"
 if (bmi < 18.5) {
-    console.log("Underweight");
-} else if (bmi >= 1.85 && bmi <= 24.9) {
-    console.log("Normal");
+    // console.log("Underweight");
+} else if (bmi >= 18.5 && bmi <= 24.9) {
+    // console.log("Normal");
 } else if (bmi >= 25 && bmi <= 29.9) {
-    console.log("Overweight");
+    // console.log("Overweight");
 } else {
-    console.log("Obese");
+    // console.log("Obese");
 }
 
 let my$age = 23;
@@ -623,7 +623,7 @@ let hasID = true;
 // → "Entry allowed"
 // warna → "Entry denied"
 if (my$age >= 18 && hasID) {
-    console.log("Entry Allowed");
+    // console.log("Entry Allowed");
 } else {
     console.log("Entry Denied");
 }
@@ -635,9 +635,9 @@ let isAdmin = false;
 // → "Access granted"
 // warna → "Access denied"
 if (isLoggedIn && isAdmin) {
-    console.log("Acces Granted");
+    // console.log("Acces Granted");
 } else {
-    console.log("Acces Denied");
+    // console.log("Acces Denied");
 }
 
 let userValue = "10";
@@ -648,18 +648,18 @@ let userValue = "10";
 // print something else
 
 let my_score = "75";
-console.log(my_score);
+// console.log(my_score);
 
 // pehle number mein convert karo
 // phir pass/fail decision lo (>= 50 pass)
 
 my_score = Number("99");
-console.log(my_score);
+// console.log(my_score);
 
 if (my_score >= 50) {
-    console.log("pass");
+    // console.log("pass");
 } else {
-    console.log("fail");
+    // console.log("fail");
 }
 
 // CHALLENGE #2
@@ -677,7 +677,26 @@ if (my_score >= 50) {
 // Note: Don't round the BMI values. Leave them as they are.
 
 if (markBMI > johnBMI) {
-    console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})`);
+    // console.log(`Mark's BMI (${markBMI}) is higher than John's (${johnBMI})`);
 } else {
-    console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})`);
+    // console.log(`John's BMI (${johnBMI}) is higher than Mark's (${markBMI})`);
 }
+
+// Type Conversion & Coercion
+
+const inputYear = "2002"; // string
+console.log(Number(inputYear) + 4); // number(type converison)
+console.log(inputYear + 4); // string(type coercion)
+console.log(Number("Hashim")); // NaN => Not a number
+console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+console.log("I'm " + 23 + " years old!");
+console.log("23" - 2);
+console.log("23" / 2);
+
+let n = "10" + 1;
+console.log(n);
+n = n - 1;
+console.log(n);
