@@ -685,16 +685,16 @@ if (markBMI > johnBMI) {
 // Type Conversion & Coercion
 
 const inputYear = "2002"; // string
-console.log(Number(inputYear) + 4); // number(type converison)
-console.log(inputYear + 4); // string(type coercion)
-console.log(Number("Hashim")); // NaN => Not a number
-console.log(typeof NaN);
+// console.log(Number(inputYear) + 4); // number(type converison)
+// console.log(inputYear + 4); // string(type coercion)
+// console.log(Number("Hashim")); // NaN => Not a number
+// console.log(typeof NaN);
 
-console.log(String(23), 23);
+// console.log(String(23), 23);
 
-console.log("I'm " + 23 + " years old!");
-console.log("23" - 2);
-console.log("23" / 2);
+// console.log("I'm " + 23 + " years old!");
+// console.log("23" - 2);
+// console.log("23" / 2);
 
 // let n = "10" + 1;
 // console.log(n); // "101"
@@ -703,41 +703,41 @@ console.log("23" / 2);
 
 let str = "100";
 let nums = Number(str); // convert to number
-console.log(nums + 50); // 150
+// console.log(nums + 50); // 150
 
 let n = 0;
-console.log(Boolean(n)); // false
+// console.log(Boolean(n)); // false
 
 let $value = 123;
-console.log(String($value) + " is a number"); // "123 is a number"
+// console.log(String($value) + " is a number"); // "123 is a number"
 
-console.log("10" + 5);  // "105"
-console.log("10" - 5);  // 5
-console.log("10" * "2"); // 20
-console.log("10" / "2"); // 10
+// console.log("10" + 5);  // "105"
+// console.log("10" - 5);  // 5
+// console.log("10" * "2"); // 20
+// console.log("10" / "2"); // 10
 
-console.log(true + 1);  // 2
-console.log(false + 10); // 10
-console.log("5" - true); // 4
+// console.log(true + 1);  // 2
+// console.log(false + 10); // 10
+// console.log("5" - true); // 4
 
-console.log("Hello" + true); // "Hellotrue"
-console.log("5" * false);   // 0
+// console.log("Hello" + true); // "Hellotrue"
+// console.log("5" * false);   // 0
 
-console.log("5" == 5); // true
-console.log("5" === 5); // false
-console.log(0 == false); // true
-console.log(0 === false); // false
-console.log(null == undefined); // true
-console.log(null === undefined); // false
+// console.log("5" == 5); // true
+// console.log("5" === 5); // false
+// console.log(0 == false); // true
+// console.log(0 === false); // false
+// console.log(null == undefined); // true
+// console.log(null === undefined); // false
 
 let $age = "23"; // string
 // Convert to number
 // if age >= 18 → "Adult" else "Not Adult"
-console.log($age);
+// console.log($age);
 $age = Number($age);
-console.log($age);
+// console.log($age);
 if ($age >= 18) {
-    console.log("Adult");
+    // console.log("Adult");
 } else {
     console.log("Not Adult!");
 }
@@ -746,31 +746,94 @@ let price1 = "1000";
 let price2 = 200;
 let total = price1 + price2; // What happens?
 // Fix it using explicit conversion
-console.log(total);
-console.log(price1);
+// console.log(total);
+// console.log(price1);
 price1 = Number(price1);
-console.log(price1);
+// console.log(price1);
 total = price1 + price2;
-console.log(total);
+// console.log(total);
 
 let userInput = "";
 if (userInput) {
     console.log("Input provided");
 } else {
-    console.log("Input empty"); // Input empty
+    // console.log("Input empty"); // Input empty
 }
 
 // Predict outputs first, then run
-console.log("1" + 1);  // "11"
-console.log("1" - 1);  // 0
-console.log("2" * "3"); // 6
-console.log("4" / "2"); // 2
-console.log("5" + true); // "5true"
-console.log("5" - true); // 4
-console.log(false + 10); // 10
-console.log(false - 1); // -1
+// console.log("1" + 1);  // "11"
+// console.log("1" - 1);  // 0
+// console.log("2" * "3"); // 6
+// console.log("4" / "2"); // 2
+// console.log("5" + true); // "5true"
+// console.log("5" - true); // 4
+// console.log(false + 10); // 10
+// console.log(false - 1); // -1
 console.log(!""); // true
-console.log(!!"Hello"); // true
+// console.log(!!"Hello"); // true
 
-console.log("10" - "4" - 3 + "2"); // "32"
-console.log("10" + 4 - 3);         // 13
+// console.log("10" - "4" - 3 + "2"); // "32"
+// console.log("10" + 4 - 3);         // 13
+
+// console.log("5" + 2 + 3); // "523"
+// console.log(2 + 3 + "5"); // "55"
+// console.log("5" - "2" + 1); // 4
+// console.log("5" + 2 - 1); // 51
+// console.log(null + 1); // 1
+// console.log(undefined + 1); // NaN
+
+// Truthy & Falsy values
+
+// false
+// 0
+// ""
+// null
+// undefined
+// NaN
+// Except these values are all truthy values
+
+if ("") console.log("run");     // ❌
+if ("hello") console.log("run"); // ✅
+
+if ("0") { } // ✅ true
+if ([]) { } // ✅ true
+if ({}) { } // ✅ true
+
+if (0) console.log("A");
+else console.log("B"); // "B"
+
+if ("") console.log("Yes");
+else console.log("No"); // "No"
+
+if ("0") console.log("True"); // "True"
+
+let $x = [];
+if ($x) console.log("Array is truthy"); // Array is truthy
+
+let $y = null;
+if (!$y) console.log("Falsy"); // "Falsy"
+
+// 🧠 Mini Tasks
+// User input lo → agar empty ho to "Enter value"
+// Score variable → agar 0 ho to "No score"
+// Check karo variable assigned hai ya nahi (truthy check)
+let userVal = ".";
+if (userVal) {
+    console.log();
+} else {
+    console.log("Enter value");
+}
+
+let myScore = 0;
+if (myScore <= 0) {
+    console.log("No Score");
+} else {
+    console.log("Score");
+}
+
+let userData;
+if (userData === undefined) {
+    console.log("Enter your data");
+} else {
+    console.log();
+}
