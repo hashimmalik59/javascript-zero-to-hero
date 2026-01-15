@@ -696,7 +696,81 @@ console.log("I'm " + 23 + " years old!");
 console.log("23" - 2);
 console.log("23" / 2);
 
-let n = "10" + 1;
-console.log(n);
-n = n - 1;
-console.log(n);
+// let n = "10" + 1;
+// console.log(n); // "101"
+// n = n - 1;
+// console.log(n); // 100
+
+let str = "100";
+let nums = Number(str); // convert to number
+console.log(nums + 50); // 150
+
+let n = 0;
+console.log(Boolean(n)); // false
+
+let $value = 123;
+console.log(String($value) + " is a number"); // "123 is a number"
+
+console.log("10" + 5);  // "105"
+console.log("10" - 5);  // 5
+console.log("10" * "2"); // 20
+console.log("10" / "2"); // 10
+
+console.log(true + 1);  // 2
+console.log(false + 10); // 10
+console.log("5" - true); // 4
+
+console.log("Hello" + true); // "Hellotrue"
+console.log("5" * false);   // 0
+
+console.log("5" == 5); // true
+console.log("5" === 5); // false
+console.log(0 == false); // true
+console.log(0 === false); // false
+console.log(null == undefined); // true
+console.log(null === undefined); // false
+
+let $age = "23"; // string
+// Convert to number
+// if age >= 18 → "Adult" else "Not Adult"
+console.log($age);
+$age = Number($age);
+console.log($age);
+if ($age >= 18) {
+    console.log("Adult");
+} else {
+    console.log("Not Adult!");
+}
+
+let price1 = "1000";
+let price2 = 200;
+let total = price1 + price2; // What happens?
+// Fix it using explicit conversion
+console.log(total);
+console.log(price1);
+price1 = Number(price1);
+console.log(price1);
+total = price1 + price2;
+console.log(total);
+
+let userInput = "";
+if (userInput) {
+    console.log("Input provided");
+} else {
+    console.log("Input empty"); // Input empty
+}
+
+// Predict outputs first, then run
+console.log("1" + 1);  // "11"
+console.log("1" - 1);  // 0
+console.log("2" * "3"); // 6
+console.log("4" / "2"); // 2
+console.log("5" + true); // "5true"
+console.log("5" - true); // 4
+console.log(false + 10); // 10
+console.log(false - 1); // -1
+console.log(!""); // true
+console.log(!!"Hello"); // true
+
+console.log("10" - "4" - 3 + "2"); // "32"
+console.log("10" + 4 - 3);         // 13
