@@ -1023,13 +1023,128 @@ let scoreKoalas;
 let averageDolphin = (96 + 108 + 89) / 3;
 let averageKoalas = (88 + 91 + 110) / 3;
 
-console.log(`Dolphin average score: ${averageDolphin}`);
-console.log(`Koalas average score: ${averageKoalas}`);
+// console.log(`Dolphin average score: ${averageDolphin}`);
+// console.log(`Koalas average score: ${averageKoalas}`);
 
 if (averageDolphin > averageKoalas) {
-    console.log("Dolphins win the trophy");
+    // console.log("Dolphins win the trophy");
 } else if (averageKoalas > averageDolphin) {
     console.log("Koalas win the trophy");
 } else {
     console.log("Both win the trophy");
+}
+
+// Swtich Statement
+
+const day = "monday";
+switch (day) {
+    case "monday":
+        console.log("Plan Course structure");
+        break;
+    case "tuesday":
+        console.log("Prepare theory videos");
+        break;
+    case "wednesday":
+        console.log("Write code examples");
+        break;
+    case "thursday":
+        console.log("Record videos");
+        break;
+    case "friday":
+        console.log("Jumma prayer");
+        break;
+    case "saturday":
+        console.log("Enjoy the weekend");
+        break;
+    case "sunday":
+        console.log("Enjoy holiday");
+        break;
+    default:
+        console.log("Wrong day");
+}
+
+// Task 1: The Week Planner Ek variable banao day.switch statement use karke har din ke liye ek activity print karo:
+// monday: "Coding Practice"
+// tuesday: "Jonas ka lecture dekhna"
+//     wednesday aur thursday: "Project par kaam karna"(Dono ke liye ek hi output)
+// friday: "Revision"
+//     saturday aur sunday: "Chutti! 🥳"
+// Default: "Ye kaunsa din hai?"
+
+const userDay = "fri";
+switch (userDay) {
+    case "mon":
+        console.log("Coding Practice");
+        break;
+    case "tue":
+        console.log("Jonas ka lecture dekhna");
+        break;
+    case "wed":
+    case "thur":
+        console.log("Project par kaam karna");
+        break;
+    case "fri":
+        console.log("Revision");
+        break;
+    case "sat":
+    case "sun":
+        console.log("Chutti");
+        break;
+    default:
+        console.log("Yeh kaunsa din hai?");
+}
+
+// Task 2: Grade Calculator Ek variable banao grade(A, B, C, D, F).
+//     'A': "Zabardast! Full marks."
+// 'B': "Acha hai, lekin behtar ho sakta hai."
+// 'C': "Theek hai, thori aur mehnat karo."
+// 'D': "Pass ho gaye bas."
+// 'F': "Fail! Dobara parho."
+// Default: "Invalid Grade."
+const userGrade = "A";
+switch (userGrade) {
+    case "A":
+        console.log(`Grade ${userGrade}`);
+        break;
+    case "B":
+        console.log(`Grade ${userGrade}`);
+        break;
+    case "C":
+        console.log(`Grade ${userGrade}`);
+        break;
+    case "D":
+        console.log(`Grade ${userGrade}`);
+        break;
+    case "F":
+        console.log(`Fail ${userGrade}`);
+        break;
+    default:
+        console.log(`Invalid grade ${userGrade}`);
+}
+
+// Task 3: Challenge(The Combo) Jonas ke course mein aksar switch ko prompt ke saath use kiya jata hai.
+//     User se uska favouriteFruit pucho.
+//     Agar "banana" hai toh print karo "Yellow fruit".
+//     Agar "apple" hai toh print karo "Red fruit".
+//     Agar kuch aur hai toh print karo "Pata nahi kaunsa rang hai".
+
+const userFavouriteFruit = prompt("Enter your favourite fruit");
+switch (userFavouriteFruit) {
+    case "Apple":
+        console.log("Saib");
+        break;
+    case "Banana":
+        console.log("Kela");
+        break;
+    case "Orange":
+        console.log("Malta");
+        break;
+    case "Guava":
+        console.log("Amrood");
+        break;
+    case "Mango":
+        console.log("Aam");
+        break;
+    default:
+        console.log("Invalid fruit");
 }
