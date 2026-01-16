@@ -837,3 +837,25 @@ if (userData === undefined) {
 } else {
     console.log();
 }
+
+console.log(Boolean(0)); // false
+console.log(Boolean(undefined)); // false
+console.log(Boolean("Jonas")); // true
+console.log(Boolean({})); // true
+console.log(Boolean([])); // true
+console.log(Boolean("")); // false
+
+const balance = 0;
+if (balance) {
+    console.log("Hello sir!");
+} else {
+    console.log("Your balance is insufficient!");
+}
+
+
+let userWeight = 45;
+if (userWeight) {
+    console.log(`Your weight is ${userWeight}`);
+} else {
+    console.log(`Your weight is UNDEFINED`);
+}
