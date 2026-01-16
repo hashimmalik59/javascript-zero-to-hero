@@ -465,8 +465,8 @@ let mycountry = "Pakistan";
 // I live in Karachi, Pakistan.
 // console.log(`I live in ${city}, ${mycountry}`);
 
-let a = 5;
-let b = 10;
+// let a = 5;
+// let b = 10;
 
 // Output:
 // The sum of 5 and 10 is 15.
@@ -769,7 +769,7 @@ if (userInput) {
 // console.log("5" - true); // 4
 // console.log(false + 10); // 10
 // console.log(false - 1); // -1
-console.log(!""); // true
+// console.log(!""); // true
 // console.log(!!"Hello"); // true
 
 // console.log("10" - "4" - 3 + "2"); // "32"
@@ -793,25 +793,25 @@ console.log(!""); // true
 // Except these values are all truthy values
 
 if ("") console.log("run");     // ❌
-if ("hello") console.log("run"); // ✅
+// if ("hello") console.log("run"); // ✅
 
 if ("0") { } // ✅ true
 if ([]) { } // ✅ true
 if ({}) { } // ✅ true
 
 if (0) console.log("A");
-else console.log("B"); // "B"
+// else console.log("B"); // "B"
 
 if ("") console.log("Yes");
-else console.log("No"); // "No"
+// else console.log("No"); // "No"
 
-if ("0") console.log("True"); // "True"
+// if ("0") console.log("True"); // "True"
 
 let $x = [];
-if ($x) console.log("Array is truthy"); // Array is truthy
+// if ($x) console.log("Array is truthy"); // Array is truthy
 
 let $y = null;
-if (!$y) console.log("Falsy"); // "Falsy"
+// if (!$y) console.log("Falsy"); // "Falsy"
 
 // 🧠 Mini Tasks
 // User input lo → agar empty ho to "Enter value"
@@ -819,43 +819,99 @@ if (!$y) console.log("Falsy"); // "Falsy"
 // Check karo variable assigned hai ya nahi (truthy check)
 let userVal = ".";
 if (userVal) {
-    console.log();
+    // console.log();
 } else {
     console.log("Enter value");
 }
 
 let myScore = 0;
 if (myScore <= 0) {
-    console.log("No Score");
+    // console.log("No Score");
 } else {
     console.log("Score");
 }
 
 let userData;
 if (userData === undefined) {
-    console.log("Enter your data");
+    // console.log("Enter your data");
 } else {
     console.log();
 }
 
-console.log(Boolean(0)); // false
-console.log(Boolean(undefined)); // false
-console.log(Boolean("Jonas")); // true
-console.log(Boolean({})); // true
-console.log(Boolean([])); // true
-console.log(Boolean("")); // false
+// console.log(Boolean(0)); // false
+// console.log(Boolean(undefined)); // false
+// console.log(Boolean("Jonas")); // true
+// console.log(Boolean({})); // true
+// console.log(Boolean([])); // true
+// console.log(Boolean("")); // false
 
 const balance = 0;
 if (balance) {
     console.log("Hello sir!");
 } else {
-    console.log("Your balance is insufficient!");
+    // console.log("Your balance is insufficient!");
 }
 
 
-let userWeight = 45;
+let userWeight = 0;
 if (userWeight) {
     console.log(`Your weight is ${userWeight}`);
 } else {
-    console.log(`Your weight is UNDEFINED`);
+    // console.log(`Your weight is UNDEFINED`);
 }
+
+// Equality Operator == vs ===
+
+const user_age = "18";
+if (user_age === 18) {
+    console.log("Adult (strict)");
+}
+if (user_age == 18) {
+    // console.log("Adult (loose)");
+}
+
+// Note: Always use strict eqaulity operator for less bugs
+
+// let luckyNumber = +prompt("My lucky number");
+// console.log(luckyNumber);
+// console.log(typeof luckyNumber);
+
+// if (luckyNumber === 4) {
+// console.log(`My lucky number is ${luckyNumber}`);
+// } else {
+// console.log(`${luckyNumber} is not my lucky number`);
+// }
+
+// Ek variable banao numNeighbors.User se prompt ke zariye number lo.
+
+//     Agar numNeighbors === 1 hai, toh print karo: "Sirf 1 padosi hai!"
+
+// Task 1: The "Simple Logic" Ek variable banao numNeighbors. User se prompt ke zariye number lo.
+// Agar aap prompt se value le rahe ho, toh yaad rakhna prompt hamesha string deta hai.Aapko usey pehle number mein convert karna hoga(Number(prompt(...))) taaki === kaam kare.
+// let numNeighbors = +prompt("Enter how much neighbors");
+// if (numNeighbors === 1) {
+//     console.log("Sirf 1 Padosi");
+// }
+
+// Task 2: Guess the Result Inka result socho aur phir console mein check karo:
+// '10' == 10(True ya False ?)
+// '10' === 10(True ya False ?)
+// 15 != '15'(True ya False ?)
+// 15 !== '15'(True ya False ?)
+
+// console.log("10" == 10); // true
+// console.log("10" === 10); // false
+// console.log("15" != 15); // false
+// console.log("15" !== 15); // true
+
+// Task 3: Challenge Problem Ek program likho:
+//     Variable favouriteNumber banao.
+//     User se uska favourite number pucho.
+//     Agar number 23 hai (strictly), toh print karo: "23 ek cool number hai!"
+//     Agar 23 nahi hai, toh print karo: "Wese 23 zyada behtar tha."
+// let favouriteNumber = +prompt("Enter your favourite number!");
+// if (favouriteNumber === 23) {
+//     console.log(`${favouriteNumber} is cool number!`);
+// } else {
+//     console.log(`Waise ${favouriteNumber} aik behtar number hai!`);
+// }git
