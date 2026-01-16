@@ -955,31 +955,30 @@ if (!isBanned && candidateAge >= 18 && (isMembershipCard || isVIPList)) {
 
 const hasDrivingLicense = false;
 const hasGoodVision = true;
-
-console.log(hasDrivingLicense && hasGoodVision); // false
-console.log(hasDrivingLicense || hasGoodVision); // true
-console.log(!hasDrivingLicense); // true
-console.log(!hasGoodVision); // false
+// console.log(hasDrivingLicense && hasGoodVision); // false
+// console.log(hasDrivingLicense || hasGoodVision); // true
+// console.log(!hasDrivingLicense); // true
+// console.log(!hasGoodVision); // false
 
 let shouldDrive = hasDrivingLicense && hasGoodVision;
 
 if (shouldDrive) {
     console.log("Now can DRIVE");
 } else {
-    console.log("Now you cannot DRIVE");
+    // console.log("Now you cannot DRIVE");
 }
 
 const isTired = true;
 
 if (isTired && hasDrivingLicense && hasGoodVision) {
-    console.log("You can drive");
+    // console.log("You can drive");
 }
 
 // Task 1: Logi-Guess (Dimag ghumao) Inka output guess karo aur phir console mein check karo:
 
-console.log(true && false || true); // true
-console.log(true && (false || true)); // true
-console.log(!true || !false); // true
+// console.log(true && false || true); // true
+// console.log(true && (false || true)); // true
+// console.log(!true || !false); // true
 
 // Task 2: The "Admission" Logic Ek student ko university mein admission tabhi milega jab:
 // Uske marks 80 se zyada hon.
@@ -991,7 +990,7 @@ const isAlumni = false;
 const isDiscipline = true;
 
 if (studentMarks >= 80 && (isSportsCertificate || isAlumni) && isDiscipline) {
-    console.log("Admission Granted!");
+    // console.log("Admission Granted!");
 } else {
     console.log("Admission Denined!");
 }
@@ -1003,7 +1002,34 @@ let isRaining = false;
 let tempe = 25;
 let hasUmbrella = false;
 if ((!isRaining || hasUmbrella) && (tempe >= 20 && tempe <= 30)) {
-    console.log("Enjoying Outing!");
+    // console.log("Enjoying Outing!");
 } else {
     console.log("It's Ok go tommorow!");
+}
+
+// CHALLENGE #3
+// There are two gymnastics teams: Dolphins and Koalas. They compete against each other 3 times. The winner with the highest average score wins a trophy!
+// Your tasks:
+// 1. Calculate the average score for each team, using the test data included below. The average score for Dolphins should be assigned to the scoreDolphins variable, and the average score of Koalas should be assigned to the scoreKoalas variable.
+// 2. Compare the team's average scores to determine the winner of the competition, and print to the console:
+// "Dolphins win the trophy" if Dolphins win, or
+// "Koalas win the trophy" if Koalas win, or
+// "Both win the trophy" if their average scores are equal.
+// TEST DATA: Dolphins scored 96, 108, and 89. Koalas scored 88, 91, and 110.
+
+let scoreDolphin;
+let scoreKoalas;
+
+let averageDolphin = (96 + 108 + 89) / 3;
+let averageKoalas = (88 + 91 + 110) / 3;
+
+console.log(`Dolphin average score: ${averageDolphin}`);
+console.log(`Koalas average score: ${averageKoalas}`);
+
+if (averageDolphin > averageKoalas) {
+    console.log("Dolphins win the trophy");
+} else if (averageKoalas > averageDolphin) {
+    console.log("Koalas win the trophy");
+} else {
+    console.log("Both win the trophy");
 }
