@@ -1128,23 +1128,38 @@ switch (userGrade) {
 //     Agar "apple" hai toh print karo "Red fruit".
 //     Agar kuch aur hai toh print karo "Pata nahi kaunsa rang hai".
 
-const userFavouriteFruit = prompt("Enter your favourite fruit");
-switch (userFavouriteFruit) {
-    case "Apple":
-        console.log("Saib");
-        break;
-    case "Banana":
-        console.log("Kela");
-        break;
-    case "Orange":
-        console.log("Malta");
-        break;
-    case "Guava":
-        console.log("Amrood");
-        break;
-    case "Mango":
-        console.log("Aam");
-        break;
-    default:
-        console.log("Invalid fruit");
-}
+// const userFavouriteFruit = prompt("Enter your favourite fruit");
+// switch (userFavouriteFruit) {
+//     case "Apple":
+//         console.log("Saib");
+//         break;
+//     case "Banana":
+//         console.log("Kela");
+//         break;
+//     case "Orange":
+//         console.log("Malta");
+//         break;
+//     case "Guava":
+//         console.log("Amrood");
+//         break;
+//     case "Mango":
+//         console.log("Aam");
+//         break;
+//     default:
+//         console.log("Invalid fruit");
+// }
+
+// Statement vs Expression
+// Task 1: Identify Karein(Expression vs Statement) Niche di gayi lines ko dekho aur batao kaun si Expression hai aur kaun si Statement:
+// 10 + 20 // expresssion
+// const job = 'Developer'; // expression
+// true && !false // expressiom
+// if (x > 5) { console.log(x) } // statement
+
+// Task 2: Template Literal Challenge Ek variable banao myAge = 20. Ab backticks (`) use karke console mein ek hi line mein ye print karo: "Meri umar 20 hai aur main ek Adult hoon." (Shart: Adult word aapne ${} ke andar Ternary Operator use karke nikalna hai agar age 18 se zyada ho).
+
+let user$age = 23;
+console.log(user$age >= 18 ? `Meri umar ${user$age} hai aur main Adult hun` : `Meri umar ${user$age} hai aur mein Adult nahi hun`);
+
+// Task 3: Brain Teaser Kya hum console.log(if (2 > 1) { 'Yes' }); likh sakte hain ? Kyun ?
+// console.log(if (2 > 1) { "Yes" }); // Nahi likh sakte hain kyun k yeh statment hai, console mein allowed nahi
