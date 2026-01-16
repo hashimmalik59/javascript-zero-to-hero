@@ -915,3 +915,38 @@ if (user_age == 18) {
 // } else {
 //     console.log(`Waise ${favouriteNumber} aik behtar number hai!`);
 // }git
+
+// <<Boolean Logic
+
+const a = true;
+const b = false;
+const c = (a && b); // false
+const d = (a || b); // true
+const e = !a;       // false
+const f = (a && !b); // true
+
+console.log(c); // false
+console.log(d); // true
+console.log(e); // false
+console.log(f); // true
+
+let isJavaScript = true;
+let isDesgree = false;
+let isThreeYearsExperience = true;
+
+if (isJavaScript && (isDesgree || isThreeYearsExperience)) {
+    console.log("Hired");
+} else {
+    console.log("Put some more effort");
+}
+
+let candidateAge = 23;
+let isMembershipCard = false;
+let isVIPList = true;
+let isBanned = false;
+
+if (!isBanned && candidateAge >= 18 && (isMembershipCard || isVIPList)) {
+    console.log("Welcome on Event");
+} else {
+    console.log("Better luck next time!");
+}
