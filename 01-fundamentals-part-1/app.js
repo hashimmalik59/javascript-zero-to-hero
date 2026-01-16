@@ -147,12 +147,12 @@ let discountedPrice = totalPrice * .85;
 
 // let age = 17;
 // Log "Adult" if age >= 18, else "Not Adult"
-let userAge = 23;
-if (userAge >= 18) {
-    // console.log("Adult!");
-} else {
-    // console.log("Not Adult!");
-}
+// let userAge = 23;
+// if (userAge >= 18) {
+// console.log("Adult!");
+// } else {
+// console.log("Not Adult!");
+// }
 
 // console.log("5" + 3);     // "53"
 // console.log("5" - 3);     // 2
@@ -1039,7 +1039,7 @@ if (averageDolphin > averageKoalas) {
 const day = "monday";
 switch (day) {
     case "monday":
-        console.log("Plan Course structure");
+        // console.log("Plan Course structure");
         break;
     case "tuesday":
         console.log("Prepare theory videos");
@@ -1084,7 +1084,7 @@ switch (userDay) {
         console.log("Project par kaam karna");
         break;
     case "fri":
-        console.log("Revision");
+        // console.log("Revision");
         break;
     case "sat":
     case "sun":
@@ -1104,7 +1104,7 @@ switch (userDay) {
 const userGrade = "A";
 switch (userGrade) {
     case "A":
-        console.log(`Grade ${userGrade}`);
+        // console.log(`Grade ${userGrade}`);
         break;
     case "B":
         console.log(`Grade ${userGrade}`);
@@ -1159,7 +1159,60 @@ switch (userGrade) {
 // Task 2: Template Literal Challenge Ek variable banao myAge = 20. Ab backticks (`) use karke console mein ek hi line mein ye print karo: "Meri umar 20 hai aur main ek Adult hoon." (Shart: Adult word aapne ${} ke andar Ternary Operator use karke nikalna hai agar age 18 se zyada ho).
 
 let user$age = 23;
-console.log(user$age >= 18 ? `Meri umar ${user$age} hai aur main Adult hun` : `Meri umar ${user$age} hai aur mein Adult nahi hun`);
+// console.log(user$age >= 18 ? `Meri umar ${user$age} hai aur main Adult hun` : `Meri umar ${user$age} hai aur mein Adult nahi hun`);
 
 // Task 3: Brain Teaser Kya hum console.log(if (2 > 1) { 'Yes' }); likh sakte hain ? Kyun ?
 // console.log(if (2 > 1) { "Yes" }); // Nahi likh sakte hain kyun k yeh statment hai, console mein allowed nahi
+
+// Ternary Operator
+
+const age1 = 23;
+
+if (age1 >= 18) {
+    console.log("if/else Adult");
+} else {
+    console.log("if/else Not Adult");
+}
+
+const isAdult = age1 >= 18 ? "Ternary Operator Adult" : "Ternary Operator Not Adult";
+console.log(isAdult);
+
+// Task 1: The Vote Checker Ek variable banao userAge. Ternary operator use karke ek variable canVote banao jis mein:
+// Agar age 18 ya usse zyada ho, toh value "Yes" ho.
+// Warna value "No" ho.
+
+let userAge = 23;
+let checkVote = userAge >= 18 ? "Yes" : "No";
+console.log(checkVote);
+
+// Task 2: Driving Exam Ek variable banao score = 65. Ek variable result banao jo ternary operator se ye check kare:
+// Agar score 70 se zyada hai, toh "Passed".
+// Agar kam hai, toh "Failed".
+// Is result ko ek template literal mein use karke print karo: "Your result is: Passed/Failed".
+
+let user_score = 69;
+console.log(`${user_score >= 70 ? "Passed" : "Fail"}`);
+
+// Task 3: Challenge(The "Steven's Tip" Final) Ye Jonas ka actual challenge hai.Steven ke liye ek tip calculator banao:
+// Bill ki value rakho: bill = 430.
+// Tip calculate karo:
+// Agar bill 50 se 300 ke darmiyan(including 50 and 300) hai, toh tip 15 % (bill * 0.15).
+// Warna tip 20 % (bill * 0.20).
+// Print karo: "The bill was 430, the tip was 86, and the total value 516". (Ye sab aapne Ternary operator se karna hai!)
+
+let bill = 430;
+console.log(430 * .20);
+let finalBill = (bill >= 50 && bill <= 300) ? `The bill was ${bill}, the tip was ${bill * .15}, and total value ${bill + (bill * .15)}` : `The bill was ${bill}, the tip was ${bill * .20}, and total value ${bill + (bill * .20)}`;
+console.log(finalBill);
+
+// CHALLENGE #4
+// Steven needs a very simple tip calculator for whenever he goes to eat in a restaurant. In his country, it's usual to tip 15% //if the bill value is between 50 and 300. If the value is different, the tip is 20%.
+// Your tasks:
+// Calculate the tip, depending on the bill value. Create a variable called tip for this. It's not allowed to use an if...else statement (if it's easier for you, you can start with an if...else statement, and then try to convert it to a ternary operator).
+// Print a string to the console containing the bill value, the tip, and the final value (bill + tip).
+// Example: The bill was 275, the tip was 41.25, and the total value 316.25.
+// Note: Use the values of the bill and tip variables to construct this string. Don't hard-code them 🙂
+// TEST DATA: Test with different bill values: 275, 40, and 430
+const userBill = 430;
+const tip = (userBill >= 50 && userBill <= 300) ? userBill * .15 : userBill * .2;
+console.log(`The bill was ${userBill}, the tip was ${tip}, and the total value ${userBill + tip}`);
