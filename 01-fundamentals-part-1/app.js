@@ -925,17 +925,17 @@ const d = (a || b); // true
 const e = !a;       // false
 const f = (a && !b); // true
 
-console.log(c); // false
-console.log(d); // true
-console.log(e); // false
-console.log(f); // true
+// console.log(c); // false
+// console.log(d); // true
+// console.log(e); // false
+// console.log(f); // true
 
 let isJavaScript = true;
 let isDesgree = false;
 let isThreeYearsExperience = true;
 
 if (isJavaScript && (isDesgree || isThreeYearsExperience)) {
-    console.log("Hired");
+    // console.log("Hired");
 } else {
     console.log("Put some more effort");
 }
@@ -946,7 +946,64 @@ let isVIPList = true;
 let isBanned = false;
 
 if (!isBanned && candidateAge >= 18 && (isMembershipCard || isVIPList)) {
-    console.log("Welcome on Event");
+    // console.log("Welcome on Event");
 } else {
     console.log("Better luck next time!");
+}
+
+// Logical Operators
+
+const hasDrivingLicense = false;
+const hasGoodVision = true;
+
+console.log(hasDrivingLicense && hasGoodVision); // false
+console.log(hasDrivingLicense || hasGoodVision); // true
+console.log(!hasDrivingLicense); // true
+console.log(!hasGoodVision); // false
+
+let shouldDrive = hasDrivingLicense && hasGoodVision;
+
+if (shouldDrive) {
+    console.log("Now can DRIVE");
+} else {
+    console.log("Now you cannot DRIVE");
+}
+
+const isTired = true;
+
+if (isTired && hasDrivingLicense && hasGoodVision) {
+    console.log("You can drive");
+}
+
+// Task 1: Logi-Guess (Dimag ghumao) Inka output guess karo aur phir console mein check karo:
+
+console.log(true && false || true); // true
+console.log(true && (false || true)); // true
+console.log(!true || !false); // true
+
+// Task 2: The "Admission" Logic Ek student ko university mein admission tabhi milega jab:
+// Uske marks 80 se zyada hon.
+// AUR uske paas sports ka certificate ho YA wo alumni ka bacha ho.
+// LEKIN uska koi disciplinary record (bad behavior) na ho.
+const studentMarks = 90;
+const isSportsCertificate = true;
+const isAlumni = false;
+const isDiscipline = true;
+
+if (studentMarks >= 80 && (isSportsCertificate || isAlumni) && isDiscipline) {
+    console.log("Admission Granted!");
+} else {
+    console.log("Admission Denined!");
+}
+
+// Task 3: Weather & Mood App Ek program likho jo batao ke kya aaj bahar jana chahiye?
+// Conditions: Bahar tabhi jao agar isRaining false ho AUR temperature 20 se 30 ke beech mein ho.
+// Bonus: Agar isRaining true hai lekin aapke paas hasUmbrella true hai, tab bhi aap ja sakte ho (provided temperature sahi ho).
+let isRaining = false;
+let tempe = 25;
+let hasUmbrella = false;
+if ((!isRaining || hasUmbrella) && (tempe >= 20 && tempe <= 30)) {
+    console.log("Enjoying Outing!");
+} else {
+    console.log("It's Ok go tommorow!");
 }
