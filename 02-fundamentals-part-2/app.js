@@ -135,22 +135,48 @@
 //     Ek arrow function banao calcPower jo voltage aur current le.
 //     Dono ko multiply karke result return kare.
 //     Isay brackets ke saath likho kyunki 2 parameters hain.
-const calcPower = (voltage, current) => voltage * current;
-console.log(calcPower(20, 40));
+// const calcPower = (voltage, current) => voltage * current;
+// console.log(calcPower(20, 40));
 
 // Task 3: Username Generator=
 // Ek arrow function banao createUsername jo user ka firstName aur lastName le.
 // Dono ko mila kar lowercase mein ek username return kare.
 // Example: createUsername("Ali", "Hamza") should return "alihamza".
 // (Tip: .toLowerCase() use kar sakte ho).
-const createUsername = (firstName, lastName) => {
-    const randmNumber = Math.floor(Math.random() * 100);
-    const username = firstName + lastName;
-    return username.toLowerCase() + randmNumber;
-}
-console.log(createUsername("Hashim", "Malik"));
+// const createUsername = (firstName, lastName) => {
+//     const randmNumber = Math.floor(Math.random() * 100);
+//     const username = firstName + lastName;
+//     return username.toLowerCase() + randmNumber;
+// }
+// console.log(createUsername("Hashim", "Malik"));
+
+// Function calling another function
 
 function cutFruitPieces(fruit) {
     return fruit * 4;
 }
 cutFruitPieces();
+
+function fruitProcessors(apple, orange) {
+    const applePiece = cutFruitPieces(apple);
+    const orangePiece = cutFruitPieces(orange);
+    const juice = `Juice with ${applePiece} apples and juice with ${orangePiece} oranges`;
+    return juice;
+}
+// console.log(fruitProcessors(2, 3));
+
+// Task: Retirement with Age Calculation Aapne do functions banane hain:
+//     Function 1(calcAge): Ye sirf birthYear le aur 2026 - birthYear return kare. (Ise arrow function banayein).
+//     Function 2(yearsUntilRetirement): Ye birthYear aur name le.
+//         Iske andar pehle wale calcAge function ko call karein aur age nikaalein.
+//         Retirement check karein(65 - age).
+//         Return karein: "[name] retires in [retirementYears] years".
+
+const calcAge = birthYear => 2026 - birthYear;
+function yearsUntilRetirement(firstName) {
+    const age = calcAge(2002);
+    const retirement = 60;
+    const yearsLeftForRetirement = retirement - age;
+    return `${firstName} is retired after ${yearsLeftForRetirement}`;
+}
+console.log(yearsUntilRetirement("Hashim"));
