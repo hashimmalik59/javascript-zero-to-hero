@@ -109,3 +109,48 @@
 //     return ticketPrice;
 // }
 // console.log(result2);
+
+// Arrow function
+// const calcAge3 = birthYear => 2026 - birthYear; // explicit return
+// console.log(calcAge3(2002));
+
+// const yearsUntilRetirement = (birthYear, firstName) => {
+//     const age = 2026 - birthYear;
+//     const retirementAge = 60;
+//     const yearsLeftForRetirement = retirementAge - age;
+//     return `My name is ${firstName} and ${yearsLeftForRetirement} years left for my retirement!`;
+// }
+
+// console.log(yearsUntilRetirement(2002, "Hashim"));
+// console.log(yearsUntilRetirement(2007, "Hamza"));
+
+// Task 1: Temperature Converter
+//     Ek arrow function banao celsiusToFahrenheit jo celsius value le.
+//     Formula: (celsius * 9/5) + 32.
+//     Isay sirf ek hi line mein likhne ki koshish karo (no curly braces, no return keyword).
+// const celsiusToFahrenheit = celcius => (celcius * 9 / 5) + 32;
+// console.log(celsiusToFahrenheit(10));
+
+// Task 2: Power Calculator
+//     Ek arrow function banao calcPower jo voltage aur current le.
+//     Dono ko multiply karke result return kare.
+//     Isay brackets ke saath likho kyunki 2 parameters hain.
+const calcPower = (voltage, current) => voltage * current;
+console.log(calcPower(20, 40));
+
+// Task 3: Username Generator=
+// Ek arrow function banao createUsername jo user ka firstName aur lastName le.
+// Dono ko mila kar lowercase mein ek username return kare.
+// Example: createUsername("Ali", "Hamza") should return "alihamza".
+// (Tip: .toLowerCase() use kar sakte ho).
+const createUsername = (firstName, lastName) => {
+    const randmNumber = Math.floor(Math.random() * 100);
+    const username = firstName + lastName;
+    return username.toLowerCase() + randmNumber;
+}
+console.log(createUsername("Hashim", "Malik"));
+
+function cutFruitPieces(fruit) {
+    return fruit * 4;
+}
+cutFruitPieces();
