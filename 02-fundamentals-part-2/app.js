@@ -519,13 +519,156 @@ function fruitProcessors(apple, orange) {
 //     Ye function object aur koi bhi key le, aur bracket notation ke zariye uski value return kare.
 //     Test: Ek car object banao aur is function ke zariye uska model print karwao.
 
-const car = {
-    brand: "Toyota",
-    color: "White",
-    showDetail: function (model) {
-        const key = model;
-        return key;
+// const car = {
+// brand: "Toyota",
+// color: "White",
+// model: 2026,
+// showDetail: function (model) {
+// const key = model;
+// return key;
+// }
+// };
+// console.log(car.showDetail(2026));
+// console.log(car["model"]);
+
+// Object Methods
+// const myData = {
+//     firstName: "Hashim",
+//     lastName: "Malik",
+//     birthYear: 2002,
+//     job: "Developer",
+//     friends: ["Abdullah", "Dayan", "Liaqat"],
+//     hasDriversLicense: true,
+
+// calcAge: function (birthYear) {
+//     return 2026 - birthYear;
+// }
+
+// calcAge: function () {
+//     return 2026 - this.birthYear;
+// }
+
+//     calcAge: function () {
+//         this.age = 2026 - this.birthYear;
+//         return this.age;
+//     },
+
+//     getSummary: function () {
+//         return `${this["firstName"]} is a ${this["calcAge"]()}-years old ${this["job"]}, and he has a ${this.hasDriversLicense ? "driver's license" : "not a driver's license"}`
+//     },
+// };
+// console.log(myData);
+// console.log(myData["age"]);
+// console.log(myData["getSummary"]());
+// console.log(myData.calcAge());
+// console.log(myData);
+
+// Note:
+// jab hum function se new key banate hain to key access karne se pehle us function ko call karna zaroori hai.
+
+// Task 1: The Simple Calculator
+//     Ek object banao calculator.
+//     Isme do properties rakho: num1: 10 aur num2: 5.
+//     Teen methods banao: add, subtract, aur multiply.
+//     Teeno methods this use karke result return karein.
+//     Example: calculator.add() should return 15.
+// const calculator = {
+//     num1: 10,
+//     num2: 5,
+//     add: function () {
+//         return this.num1 + this.num2;
+//     },
+//     subtract: function () {
+//         return this.num1 - this.num2;
+//     },
+//     multiply: function () {
+//         return this.num1 * this.num2;
+//     },
+// };
+// console.log(calculator);
+// console.log(calculator.add());
+// console.log(calculator.subtract());
+// console.log(calculator.multiply());
+
+// Task 2: Movie Info
+//     Ek object banao movie.
+//     Properties: title, director, releaseYear.
+//     Aik method banao getAge jo calculate kare ke film kitni purani hai (current year 2026 se).
+//     Aik method banao summary jo aik sentence return kare: "The movie [title] was directed by [director] and is [age] years old." (Tip: summary ke andar this.getAge() call karo).
+// const movie = {
+// title: "3 Idiots",
+// director: "Aamir Khan",
+// releaseYear: 2010,
+// getAge: function () {
+// return 2026 - this.releaseYear;
+// },
+// getSummary: function () {
+// return `The movie ${this.title} was directed by ${this.director} and is ${this.getAge()} years old.`
+// }
+// };
+// console.log(movie["getSummary"]());
+
+// Task 3: Challenge (The Wallet)
+//     Ek object banao myWallet.
+//     Properties: owner: 'Hashim', balance: 1000.
+//     Aik method banao addMoney(amount) jo balance mein paise jama kare.
+//     Aik method banao spendMoney(amount) jo balance se paise nikal de.
+//     Condition: spendMoney tabhi kaam kare jab balance kafi ho, warna message dikhaye "Inadequate Balance".
+// const myWallet = {
+//     owner: "Hashim",
+//     balance: 1000,
+//     addMoney: function (amount) {
+//         return this.balance + amount;
+//     },
+//     spendMoney: function (amount) {
+//         if (this.balance < 1) {
+//             return this.balance - amount;
+//         } else {
+//             return `Inadequate Balance`;
+//         }
+//     }
+// };
+// console.log(myWallet);
+// console.log(myWallet.addMoney(500));
+// console.log(myWallet.spendMoney(20));
+// console.log(myWallet);
+
+// CHALLENGE #3
+
+// Let's go back to Mark and John comparing their BMIs!
+
+// This time, let's use objects to implement the calculations! Remember: BMI = mass / (height * height) (mass in kg and height in meters).
+
+// Your tasks:
+
+//     For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith). Name these objects as mark and john, and their properties exactly as fullName, mass and height.
+
+//     Create a calcBMI method on each object to calculate the BMI (the same method on both objects). Assign the BMI value to a property called bmi (lowercase), and also return it from the method.
+
+//     Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!".
+
+// TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
+
+const mark = {
+    fullName: "Mark Miller's",
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height ** 2);
+        return this.bmi;
     }
 };
-console.log(car.showDetail(2026));
-console.log(car);
+const john = {
+    fullName: "John Smith's",
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.bmi = this.mass / (this.height ** 2);
+        return this.bmi
+    }
+};
+if (john.calcBMI > mark.calcBMI) {
+    console.log(`${john.fullName} BMI (${john.calcBMI().toFixed(1)}) is higher than ${mark.fullName} (${mark.calcBMI().toFixed(1)})!`);
+} else {
+    console.log(`${mark.fullName} BMI (${mark.calcBMI().toFixed(1)}) is higher than ${john.fullName} (${john.calcBMI().toFixed(1)})!`);
+}
