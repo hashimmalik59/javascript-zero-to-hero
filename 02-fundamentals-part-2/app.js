@@ -173,10 +173,17 @@ function fruitProcessors(apple, orange) {
 //         Return karein: "[name] retires in [retirementYears] years".
 
 const calcAge = birthYear => 2026 - birthYear;
-function yearsUntilRetirement(firstName) {
-    const age = calcAge(2002);
+
+function yearsUntilRetirement(firstName, birthYear) {
+    const age = calcAge(birthYear);
     const retirement = 60;
     const yearsLeftForRetirement = retirement - age;
-    return `${firstName} is retired after ${yearsLeftForRetirement}`;
+    if (yearsLeftForRetirement < 0) {
+        return `${firstName} is already retired from years`;
+    } else if (yearsLeftForRetirement === 0) {
+        return `${firstName} is retired just now`;
+    } else {
+        return `${firstName} is retired after ${yearsLeftForRetirement} years`;
+    }
 }
-console.log(yearsUntilRetirement("Hashim"));
+console.log(yearsUntilRetirement("Hashim", 1946));
