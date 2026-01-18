@@ -379,46 +379,153 @@ function fruitProcessors(apple, orange) {
 
 // Object
 
-const myArr = ["Hashim", "Malik", 2026 - 2002, "Developer", ["Ali", "Khan", "Usman"]];
-console.log(myArr);
+// const myArr = ["Hashim", "Malik", 2026 - 2002, "Developer", ["Ali", "Khan", "Usman"]];
+// console.log(myArr);
 
-const myObj = {
-    firstName: "Hashim",
-    lastName: "Malik",
-    age: 2026 - 2002,
-    job: "Developer",
-    friends: ["Ali", "Khan", "Usman"],
-};
-console.log(myObj);
+// const myObj = {
+//     firstName: "Hashim",
+//     lastName: "Malik",
+//     age: 2026 - 2002,
+//     job: "Developer",
+//     friends: ["Ali", "Khan", "Usman"],
+// };
+// console.log(myObj);
 
 // Task 1: Laptop Object
 //     Ek object banao myLaptop.
 //     Isme ye properties rakho: brand, model, ram(e.g., 16), aur isSSD(true / false).
 //     Console mein laptop ka brand aur ram print karo Dot Notation use karke.
-const myLaptop = {
-    brand: "Lenovo",
-    model: 2015,
-    ram: "4GB",
-    isSSD: false,
-};
-console.log(myLaptop);
-console.log(myLaptop.ram);
+// const myLaptop = {
+//     brand: "Lenovo",
+//     model: 2015,
+//     ram: "4GB",
+//     isSSD: false,
+// };
+// console.log(myLaptop);
+// console.log(myLaptop.ram);
 
 // Task 2: Value Update Karna
 //     Task 1 wale object mein laptop ka model badal kar koi naya naam de do.
 //     Ek nayi property color bhi add karo(Hint: objectName.newKey = 'value').
 //     Poora object console mein print karke dekho.
-myLaptop.model = 2026;
-myLaptop.color = "Black";
-console.log(myLaptop);
+// myLaptop.model = 2026;
+// myLaptop.color = "Black";
+// console.log(myLaptop);
 
 // Task 3: Social Media Profile (Critical Thinking)
 //     Ek object banao profile jisme username, postsCount, aur followers (array of names) hon.
 //     Template literal use karke ye sentence print karo: "[username] has [postsCount] posts. His first follower is [followerName]."
 //     (Tip: followerName nikalne ke liye array indexing use karo jo object ke andar hai).
-const profile = {
-    username: "hashimmalik59",
-    postsCount: 79,
-    followers: ["Virat Kohli", "Cristiano Ronaldo", "Mr Beast", "Shah Rukh Khan"],
+// const profile = {
+//     username: "hashimmalik59",
+//     postsCount: 79,
+//     followers: ["Virat Kohli", "Cristiano Ronaldo", "Mr Beast", "Shah Rukh Khan"],
+// };
+// console.log(`${profile.username} has ${profile.postsCount} posts. His first follower is ${profile.followers[0]}.`);
+
+// Dot vs Bracket Notation
+// const myData = {
+//     firstName: "Hashim",
+//     lastName: "Malik",
+//     age: 2026 - 2002,
+//     job: "Developer",
+//     friends: ["Abdullah", "Dayan", "Liaqat"]
+// }
+// console.log(myData.firstName); // Dot Notation
+// console.log(myData["firstName"]); // Bracket Notation
+
+// const nameKey = "Name";
+// console.log(myData["first" + nameKey]);
+// console.log(myData["last" + nameKey]);
+
+// const myDataKey = prompt("Enter the myData obj keys to find its value and Choose between firstName, lastName, age, job");
+// console.log(myData[myDataKey]);
+
+// const city = "Peshawar";
+// console.log(myData[city]);
+// console.log(myData);
+
+// myData.country = "Pakistan";
+// myData.github = "github.com/hashimmalik59";
+
+// console.log(`${myData.firstName} has ${myData.friends.length} friends and his best friend is ${myData.friends[0]}`);
+
+// Task 1: The Variable Challenge
+//     Ek object banao fruitData jisme apple: 5 aur orange: 10 ho.
+//     User se(ya khud ek variable banao) const choice = 'apple'.
+//     Ab choice variable ko use karke fruitData se apple ki value print karo.
+//     Challenge: Kya tum dot notation se ye kar sakte ho ? (Try karke dekho aur result dekho).
+// const fruitData = {
+//     apple: 5,
+//     orange: 10,
+// };
+// console.log(fruitData);
+
+// const choice = "apple";
+
+// console.log(fruitData.apple);
+// console.log(fruitData[choice]);
+
+// console.log(fruitData);
+
+// Task 2: Space in Keys
+//     Ek object banao jisme property ka naam space ke sath ho, maslan: 'Home Address': 'Peshawar'.
+//     Is property ko console mein print karo. (Yaad rahe, dot notation yahan error degi).
+// const userAddress = {
+//     "Home Address": "Peshawar"
+// };
+// console.log(userAddress["Home Address"]);
+
+// Task 3: Dynamic Greeting
+//     Ek object banao person jisme name aur age ho.
+//     Ek function banao getProperty jo do cheezein le: (object, propertyName).
+//     Wo function us object se wo property return kare bracket notation use karke.
+//     Example: getProperty(person, 'name') should return "Hashim".
+// const person = {
+//     name: "Hashim",
+//     age: 23,
+//     getProperty: function () {
+//         return `My name is ${person["name"]} and my age is ${person["age"]}`;
+//     }
+// };
+// console.log(person.getProperty());
+
+// Task 1: The Secret Key(Variable Power)
+//     Ek object banao clubMember jisme name, membershipType, aur status ho.
+//     Ek variable banao const interestedIn = 'membershipType'.
+//     Ab interestedIn variable ko use karke object se value nikal kar console mein dikhao.
+//     Check karo: Agar tum clubMember.interestedIn likhte ho toh kya aata hai?
+// const clubMember = {
+//     name: "Hashim",
+//     membershipType: "abc",
+//     status: "VIP"
+// };
+// const interestedIn = "membershipType";
+// console.log(clubMember.membershipType);
+// console.log(clubMember["membershipType"]);
+
+// Task 2: Illegal Names (The Bracket Hero)
+//     Ek object banao jiske keys "standard" nahi hain, jaise: const data = { 'first-name': 'Hashim', 'current age': 25 };
+//     In dono values ko console mein print karo. (Tip: Dot notation yahan fail ho jayegi).
+// const userData = {
+//     "first-name": "Hashim",
+//     "current-age": 23,
+// };
+// console.log(userData["first-name"]);
+// console.log(userData["current-age"]);
+
+// Task 3: Dynamic Search Function
+//     Ek function banao showDetail(obj, key).
+//     Ye function object aur koi bhi key le, aur bracket notation ke zariye uski value return kare.
+//     Test: Ek car object banao aur is function ke zariye uska model print karwao.
+
+const car = {
+    brand: "Toyota",
+    color: "White",
+    showDetail: function (model) {
+        const key = model;
+        return key;
+    }
 };
-console.log(`${profile.username} has ${profile.postsCount} posts. His first follower is ${profile.followers[0]}.`);
+console.log(car.showDetail(2026));
+console.log(car);
