@@ -359,20 +359,66 @@ function fruitProcessors(apple, orange) {
 // TEST DATA: 125, 555, and 44.
 
 // Step 1
-function calcTip(bill) {
-    // Step 2
-    const tip = (bill >= 50 && bill <= 300) ? bill * .15 : bill * .2;
-    return tip;
-}
+// function calcTip(bill) {
+// Step 2
+// const tip = (bill >= 50 && bill <= 300) ? bill * .15 : bill * .2;
+// return tip;
+// }
 // Step 3
-console.log(calcTip(100));
+// console.log(calcTip(100));
 
 // Step 4
-const bills = [125, 555, 44];
+// const bills = [125, 555, 44];
 
 // Step 5
-const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+// const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 
 // Step 6
-const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
-console.log(total);
+// const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+// console.log(total);
+
+// Object
+
+const myArr = ["Hashim", "Malik", 2026 - 2002, "Developer", ["Ali", "Khan", "Usman"]];
+console.log(myArr);
+
+const myObj = {
+    firstName: "Hashim",
+    lastName: "Malik",
+    age: 2026 - 2002,
+    job: "Developer",
+    friends: ["Ali", "Khan", "Usman"],
+};
+console.log(myObj);
+
+// Task 1: Laptop Object
+//     Ek object banao myLaptop.
+//     Isme ye properties rakho: brand, model, ram(e.g., 16), aur isSSD(true / false).
+//     Console mein laptop ka brand aur ram print karo Dot Notation use karke.
+const myLaptop = {
+    brand: "Lenovo",
+    model: 2015,
+    ram: "4GB",
+    isSSD: false,
+};
+console.log(myLaptop);
+console.log(myLaptop.ram);
+
+// Task 2: Value Update Karna
+//     Task 1 wale object mein laptop ka model badal kar koi naya naam de do.
+//     Ek nayi property color bhi add karo(Hint: objectName.newKey = 'value').
+//     Poora object console mein print karke dekho.
+myLaptop.model = 2026;
+myLaptop.color = "Black";
+console.log(myLaptop);
+
+// Task 3: Social Media Profile (Critical Thinking)
+//     Ek object banao profile jisme username, postsCount, aur followers (array of names) hon.
+//     Template literal use karke ye sentence print karo: "[username] has [postsCount] posts. His first follower is [followerName]."
+//     (Tip: followerName nikalne ke liye array indexing use karo jo object ke andar hai).
+const profile = {
+    username: "hashimmalik59",
+    postsCount: 79,
+    followers: ["Virat Kohli", "Cristiano Ronaldo", "Mr Beast", "Shah Rukh Khan"],
+};
+console.log(`${profile.username} has ${profile.postsCount} posts. His first follower is ${profile.followers[0]}.`);
