@@ -231,63 +231,148 @@ function fruitProcessors(apple, orange) {
 
 // Array
 
-const friend1 = "Hashim";
-const friend2 = "Ahmad";
-const friend3 = "Malik";
+// const friend1 = "Hashim";
+// const friend2 = "Ahmad";
+// const friend3 = "Malik";
 
-let friends = ["Hahsim", "Ahmad", "Malik"];
+// let friends = ["Hahsim", "Ahmad", "Malik"];
 // console.log(friends);
 
-const familyMemberBirthYear = new Array(1946, 1974, 2001, 2002, 2007);
+// const familyMemberBirthYear = new Array(1946, 1974, 2001, 2002, 2007);
 // console.log(familyMemberBirthYear);
 
 // console.log(friends[friends.length - 1]);
 
-friends[2] = "Khan";
+// friends[2] = "Khan";
 // console.log(friends);
 
-friends = ["Ali", "Umar", "Abu Bakar", "Usman"];
+// friends = ["Ali", "Umar", "Abu Bakar", "Usman"];
 // console.log(friends);
 
-const firstName = "Hashim"
-const hashim = [firstName, "Malik", 2026 - 2002, "Developer", friends];
+// const firstName = "Hashim"
+// const hashim = [firstName, "Malik", 2026 - 2002, "Developer", friends];
 // console.log(hashim);
 // console.log(hashim.length);
 
 // Exercise
-const calcAge = function (birthYear) {
-    return 2026 - birthYear;
-}
-const years = [2001, 2002, 2007];
-console.log(calcAge(years[years.length - years.length]));
-console.log(calcAge(years[1]));
-console.log(calcAge(years[years.length - 1]));
+// const calcAge = function (birthYear) {
+//     return 2026 - birthYear;
+// }
+// const years = [2001, 2002, 2007];
+// console.log(calcAge(years[years.length - years.length]));
+// console.log(calcAge(years[1]));
+// console.log(calcAge(years[years.length - 1]));
 
-const siblingAges = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2])];
-console.log(siblingAges);
+// const siblingAges = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2])];
+// console.log(siblingAges);
 
 // Task 1: Favorite Fruits
 //     Ek array banao fruits jisme 5 fruits ke naam hon.
 //     Console mein 2nd aur 4th fruit ko print karo.
 //     3rd fruit ka naam badal kar "Mango" kar do aur poori array print karo.
-const fruits = ["Apple", "Banana", "Orange", "Guava", "Grapes"];
-console.log(fruits[1], fruits[3]);
-fruits[2] = "Mango";
-console.log(fruits);
+// const fruits = ["Apple", "Banana", "Orange", "Guava", "Grapes"];
+// console.log(fruits[1], fruits[3]);
+// fruits[2] = "Mango";
+// console.log(fruits);
 
 // Task 2: The Family List
 //     Ek array banao familyNames.
 //     Ek sentence print karo template literal use karke: "Meri family mein [number] log hain aur sabse bada member [name] hai."
 //     (Tip: [number] ke liye .length use karein aur [name] ke liye index 0).
 
-const familyNames = ["Ali", "Sara", "Junaid", "Uzair", "Nimra"];
-console.log(`Meri family mein ${familyNames.length} log hain aur sabse bada member ${familyNames[0]} hai.`);
+// const familyNames = ["Ali", "Sara", "Junaid", "Uzair", "Nimra"];
+// console.log(`Meri family mein ${familyNames.length} log hain aur sabse bada member ${familyNames[0]} hai.`);
 
 // Task 3: Simple Math with Arrays
 //     Ek array banao numbers jisme koi bhi 3 numbers hon.
 //     Ek naya variable banao totalSum jo un teeno numbers ko jama(add) kare array index use karte hue.
 //     Example: numbers[0] + numbers[1]...
-const numbers = [4, 23, 59];
-const totalSum = numbers[0] + numbers[1] + numbers[2];
-console.log(numbers);
-console.log(totalSum);
+// const numbers = [4, 23, 59];
+// const totalSum = numbers[0] + numbers[1] + numbers[2];
+// console.log(numbers);
+// console.log(totalSum);
+
+// Basic Array Operations
+// const friends = ["Hashim", "Ahmad", "Malik"];
+// console.log(friends);
+
+// friends.push("Khan"); // Add => End
+// console.log(friends);
+
+// friends.unshift("Ali"); // Add => Start
+// console.log(friends);
+
+// friends.pop(); // Remove => End
+// console.log(friends);
+
+// friends.shift(); // Remove => Start
+// console.log(friends);
+
+// Note:
+// push return karta hai array ki Nayi Length.
+// pop return karta hai wo Element jo remove hua hai.
+
+// console.log(friends.indexOf("Malik")); // Finding index
+// console.log(friends.indexOf("Chacha")); // -1
+
+// console.log(friends.includes("Hashim")); // true
+// console.log(friends.includes("Chacha")); // false
+
+// if (friends.includes("Hashim")) {
+//     console.log("In friends list there is 'Hashim'");
+// }
+
+// Task 1: Classroom Register
+//     Ek array banao students = ['Ahmed', 'Sara', 'Zain'].
+//         Aik naya student 'Danish' aakhir mein add karo.
+//         Aik naya student 'Amna' shuru mein add karo.
+//         Register se aakhri student ka naam nikaal do.
+//         Ab check karo ke kya 'Zain' abhi bhi list mein hai ? (console.log mein true / false dikhao).
+// const students = ["Hashim", "Sara", "Ali", "Zain"];
+// console.log(students);
+// students.push("Danish");
+// students.unshift("Amna");
+// students.pop();
+// console.log(students);
+
+// Task 3: Strict Search (Thinking Task)
+//     Ek array banao mixedData = ['Apple', 10, 'Banana'].
+//     Check karo: console.log(mixedData.includes(10)) aur console.log(mixedData.includes('10')).
+//     Dono ka result kya aaya aur kyun? (Ye aapka concept clear karega).
+// const mixedData = ["Apple", 10, "Banana"];
+// console.log(mixedData.includes(10)); // true
+// console.log(mixedData.includes("10")); // false
+
+// CHALLENGE #2
+
+// Steven wants you to improve his tip calculator, using the same rules as before — tip 15% of the bill if the bill value is between 50 and 300, and if the value is different, the tip is 20%.
+
+// Your tasks:
+//     Write a function calcTip that takes any bill value as an input and returns the corresponding tip, calculated based on the rules above (you can check out the code from the first tip calculator challenge if you need to). Use the function type you like the most. Test the function using a bill value of 100.
+
+//     And now let's use arrays! So, create an array called bills containing the test data below.
+
+//     Create an array called tips containing the tip value for each bill, calculated from the function you created before.
+
+//     BONUS: Create an array totals containing the total values, so the bill + tip.
+
+// TEST DATA: 125, 555, and 44.
+
+// Step 1
+function calcTip(bill) {
+    // Step 2
+    const tip = (bill >= 50 && bill <= 300) ? bill * .15 : bill * .2;
+    return tip;
+}
+// Step 3
+console.log(calcTip(100));
+
+// Step 4
+const bills = [125, 555, 44];
+
+// Step 5
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+
+// Step 6
+const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+console.log(total);
