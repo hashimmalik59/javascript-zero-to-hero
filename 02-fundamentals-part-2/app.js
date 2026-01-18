@@ -206,25 +206,88 @@ function fruitProcessors(apple, orange) {
 
 // TEST DATA 2: Dolphins scored 85, 54, and 41. Koalas scored 23, 34, and 27.
 
-const calcAverage = (a, b, c) => (a + b + c) / 3;
+// const calcAverage = (a, b, c) => (a + b + c) / 3;
 
-function checkWinner(avgDolphins, avgKoalas) {
+// function checkWinner(avgDolphins, avgKoalas) {
 
-    if (avgDolphins >= 2 * avgKoalas) {
-        console.log(`Dolphin win (${avgDolphins} vs ${avgKoalas})`);
-    } else if (avgKoalas >= 2 * avgDolphins) {
-        console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
-    } else {
-        console.log(`No team wins...`);
-    }
+//     if (avgDolphins >= 2 * avgKoalas) {
+//         console.log(`Dolphin win (${avgDolphins} vs ${avgKoalas})`);
+//     } else if (avgKoalas >= 2 * avgDolphins) {
+//         console.log(`Koalas win (${avgKoalas} vs ${avgDolphins})`);
+//     } else {
+//         console.log(`No team wins...`);
+//     }
+// }
+
+// // Data 1
+// let scoreDolphins = calcAverage(44, 23, 71);
+// let scoreKoalas = calcAverage(65, 54, 49);
+// checkWinner(scoreDolphins, scoreKoalas);
+
+// // Data 2
+// scoreDolphins = calcAverage(85, 54, 41);
+// scoreKoalas = calcAverage(27, 34, 27);
+// checkWinner(scoreDolphins, scoreKoalas);
+
+// Array
+
+const friend1 = "Hashim";
+const friend2 = "Ahmad";
+const friend3 = "Malik";
+
+let friends = ["Hahsim", "Ahmad", "Malik"];
+// console.log(friends);
+
+const familyMemberBirthYear = new Array(1946, 1974, 2001, 2002, 2007);
+// console.log(familyMemberBirthYear);
+
+// console.log(friends[friends.length - 1]);
+
+friends[2] = "Khan";
+// console.log(friends);
+
+friends = ["Ali", "Umar", "Abu Bakar", "Usman"];
+// console.log(friends);
+
+const firstName = "Hashim"
+const hashim = [firstName, "Malik", 2026 - 2002, "Developer", friends];
+// console.log(hashim);
+// console.log(hashim.length);
+
+// Exercise
+const calcAge = function (birthYear) {
+    return 2026 - birthYear;
 }
+const years = [2001, 2002, 2007];
+console.log(calcAge(years[years.length - years.length]));
+console.log(calcAge(years[1]));
+console.log(calcAge(years[years.length - 1]));
 
-// Data 1
-let scoreDolphins = calcAverage(44, 23, 71);
-let scoreKoalas = calcAverage(65, 54, 49);
-checkWinner(scoreDolphins, scoreKoalas);
+const siblingAges = [calcAge(years[0]), calcAge(years[1]), calcAge(years[2])];
+console.log(siblingAges);
 
-// Data 2
-scoreDolphins = calcAverage(85, 54, 41);
-scoreKoalas = calcAverage(27, 34, 27);
-checkWinner(scoreDolphins, scoreKoalas);
+// Task 1: Favorite Fruits
+//     Ek array banao fruits jisme 5 fruits ke naam hon.
+//     Console mein 2nd aur 4th fruit ko print karo.
+//     3rd fruit ka naam badal kar "Mango" kar do aur poori array print karo.
+const fruits = ["Apple", "Banana", "Orange", "Guava", "Grapes"];
+console.log(fruits[1], fruits[3]);
+fruits[2] = "Mango";
+console.log(fruits);
+
+// Task 2: The Family List
+//     Ek array banao familyNames.
+//     Ek sentence print karo template literal use karke: "Meri family mein [number] log hain aur sabse bada member [name] hai."
+//     (Tip: [number] ke liye .length use karein aur [name] ke liye index 0).
+
+const familyNames = ["Ali", "Sara", "Junaid", "Uzair", "Nimra"];
+console.log(`Meri family mein ${familyNames.length} log hain aur sabse bada member ${familyNames[0]} hai.`);
+
+// Task 3: Simple Math with Arrays
+//     Ek array banao numbers jisme koi bhi 3 numbers hon.
+//     Ek naya variable banao totalSum jo un teeno numbers ko jama(add) kare array index use karte hue.
+//     Example: numbers[0] + numbers[1]...
+const numbers = [4, 23, 59];
+const totalSum = numbers[0] + numbers[1] + numbers[2];
+console.log(numbers);
+console.log(totalSum);
