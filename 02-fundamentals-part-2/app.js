@@ -724,3 +724,94 @@ function fruitProcessors(apple, orange) {
 // for (let i = 10; i >= 1; i--) {
 //     console.log(i);
 // }
+
+// Looping Arrays, Breaking and Continuing
+
+const hashimArray = [
+    "Hashim",
+    "Malik",
+    2026 - 2002,
+    "Developer",
+    ["Abdullah", "Dayan", "Liaqat"],
+    true
+]
+// console.log(hashimArray);
+
+// const type = [];
+
+// for (let i = 0; i < hashimArray.length; i++) {
+//     console.log(hashimArray[i] + " | " + typeof hashimArray[i]);
+//     type.push(typeof hashimArray[i]);
+//     type[i] = typeof hashimArray[i];
+// }
+// console.log(type);
+
+// const birthYears = [1946, 1975, 2001, 2002, 2007];
+// const ages = [];
+
+// for (let i = 0; i < birthYears.length; i++) {
+//     ages.push(2026 - birthYears[i]);
+// }
+// // console.log(ages);
+
+// Note:
+// we cannot do like that 2026 - birthYear(wrong)
+// we need to do that one by one from each array element
+
+// console.log("-----STRING----");
+// for (let i = 0; i < hashimArray.length; i++) {
+//     if (typeof hashimArray[i] === "string") continue;
+//     console.log(hashimArray[i]);
+// }
+
+// console.log("-----NON-STRING----");
+// for (let i = 0; i < hashimArray.length; i++) {
+//     if (typeof hashimArray[i] !== "string") continue;
+//     console.log(hashimArray[i]);
+// }
+
+// Task 1: The Type Filter (Continue)
+//     Ek array banao mixedArray = ['Hashim', 25, true, 'Malik', ['JS', 'React'], 10].
+//     Loop chalao aur sirf Strings ko console mein print karo.
+//     Hint: if (typeof mixedArray[i] !== 'string') continue;
+// const mixedArray = ["Hashim", 25, true, "Malik", ["JS", "React"], 10];
+// for (let i = 0; i < mixedArray.length; i++) {
+//     if (typeof mixedArray[i] !== "string") {
+//         continue;
+//     }
+//     console.log(mixedArray[i]);
+// }
+
+// Task 2: Find the Number (Break)
+//     Ek array banao numbers = [1, 3, 5, 7, 9, 10, 11, 13].
+//     Loop chalao aur numbers print karo, lekin jaise hi pehla Even Number (jo 2 se divide ho jaye) mile, loop ko Break kardo.
+//     Example Output: 1, 3, 5, 7, 9. (Jaise hi 10 milega loop khatam ho jana chahiye).
+// const numbers = [1, 3, 5, 7, 9, 10, 11, 13];
+// for (let i = 0; i < numbers.length; i++) {
+//     if (numbers[i] % 2 === 0) {
+//         break;
+//     }
+//     console.log(numbers[i]);
+// }
+
+// Task 3: Square Array (Building New Data)
+//     Ek array banao nums = [2, 3, 4, 5].
+//     Ek khali array banao const squares = [].
+//     Loop chalao aur nums ke har number ka square (22,32...) nikaal kar squares array mein push karo.
+//     Final squares array console mein dekho.
+// const nums = [2, 3, 4, 5];
+// const squares = [];
+// console.log(squares);
+// for (let i = 0; i < nums.length; i++) {
+//     squares.push(nums[i] ** 2);
+// }
+// console.log(squares);
+
+// Task 4: Reverse Array Loop
+//     Ek array banao items = ['A', 'B', 'C', 'D'].
+//     Is array ko ulta print karo loop use karke (D se shuru ho kar A tak).
+//     Hint: Loop ko items.length - 1 se shuru karo aur i >= 0 tak le jao.
+// const items = [1, 2, 3, 4];
+// for (let i = items.length; i > 0; i--) {
+//     console.log(items[i]);
+// }
