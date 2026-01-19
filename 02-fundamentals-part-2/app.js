@@ -888,3 +888,89 @@ function fruitProcessors(apple, orange) {
 //         console.log(foodMenu[i]);
 //     }
 // }
+
+// The while loop
+// for (let i = 1; i < 4; i++) {
+//     console.log(`--- Pushup ---`);
+//     for (let j = 1; j < 6; j++) {
+//         console.log(`Pushup rep ${j}`)
+//     }
+// }
+
+// let rep = 1;
+// console.log(`--- Pushup ---`);
+// while (rep < 6) {
+//     console.log(`Pushup rep ${rep}`);
+//     rep++;
+// }
+
+// let dice = Math.floor(Math.random() * 6) + 1;
+// while (dice !== 6) {
+// console.log(`Roll again ${dice}`);
+// dice++;
+// }
+
+// Task 1: The Simple Countdown
+//     Ek variable banao let timer = 10.
+//     while loop use karke ulthi ginti (countdown) print karo: 10, 9, 8... 1.
+//     Jab timer 0 ho jaye, toh print karo: "Blast Off! 🚀".
+// let timer = 10;
+// while (timer <= 0) {
+//     if (timer === 0) {
+//         console.log("Blast Off!");
+//     }
+//     console.log(timer);
+//     timer--;
+// }
+
+// Task 2: The Password Guess
+//     Ek variable banao const correctPass = "1234".
+//     Ek variable banao let guess = "".
+//     (Assume karo user guess kar raha hai) Ek loop chalao jo tab tak chale jab tak guess aur correctPass barabar na ho jayein.
+//     Har baar console mein likho: "Wrong password, trying again...".
+//     Twist: Loop ke andar guess ki value ko manually update karo (e.g., guess = "1234") taake loop khatam ho sake.
+// const correctPass = "1234";
+// let guess = "";
+// while (correctPass === guess) {
+//     console.log(correctPass);
+//     correctPass++;
+// }
+
+// Task 3: Accumulator (Gullak)
+//     Ek khali gullak banao let balance = 0.
+//     while loop chalao jo tab tak chale jab tak balance 500 ya usse zyada na ho jaye.
+//     Har baar balance mein 50 jama karo (balance += 50).
+//     Console mein dikhao balance kitna ho raha hai har step par.
+// let balance = 0;
+// while (balance === 500) {
+//     console.log(balance);
+//     balance++;
+// }
+
+// Task 4: The Lucky Number Challenge
+//     Ek variable luckyNum = 7 rakho.
+//     while loop mein har baar ek random number (1 se 10) generate karo.
+//     Loop tab rukna chahiye jab random number 7 ho jaye.
+//     Print karo: "Searching... got [number]" aur aakhir mein "Found it!".
+// const luckyNum = 7;
+// while (luckyNum) {
+//     if (luckyNum === 7) {
+//         break;
+//     }
+//     console.log(luckyNum)
+//     luckyNum++;
+// }
+
+// Task:
+//     Ek array banao const family = ['Ammi', 'Abbu', 'Bhai', 'Behan'].
+//     Ek for loop chalao jo har member ko Salaam kare: "Assalam-o-Alaikum Ammi", etc.
+//     Phir wohi kaam aik while loop se karke dikhao.
+let family = ['Ammi', 'Abbu', 'Bhai', 'Behan'];
+for (let i = 0; i < family.length; i++) {
+    // console.log(`Assalam-o-Alaikum ${family[i]}`)
+}
+let i = 0;
+while (i < family.length) {
+    console.log(`Assalam-o-Alaikum ${family[i]}`)
+    i++;
+}
