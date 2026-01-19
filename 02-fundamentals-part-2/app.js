@@ -727,14 +727,14 @@ function fruitProcessors(apple, orange) {
 
 // Looping Arrays, Breaking and Continuing
 
-const hashimArray = [
-    "Hashim",
-    "Malik",
-    2026 - 2002,
-    "Developer",
-    ["Abdullah", "Dayan", "Liaqat"],
-    true
-]
+// const hashimArray = [
+//     "Hashim",
+//     "Malik",
+//     2026 - 2002,
+//     "Developer",
+//     ["Abdullah", "Dayan", "Liaqat"],
+//     true
+// ]
 // console.log(hashimArray);
 
 // const type = [];
@@ -814,4 +814,76 @@ const hashimArray = [
 // const items = [1, 2, 3, 4];
 // for (let i = items.length; i > 0; i--) {
 //     console.log(items[i]);
+// }
+
+// Looping backward and loops in loops
+// const hashimArray = [
+//     "Hashim",
+//     "Malik",
+//     2026 - 2002,
+//     "Developer",
+//     ["Abdullah", "Dayan", "Liaqat"],
+//     true
+// ]
+// for (let i = hashimArray.length - 1; i >= 0; i--) {
+//     console.log(i + 1, hashimArray[i]);
+// }
+
+// for (let i = 1; i <= 3; i++) {
+//     console.log(`------Pushup ${i}-------`);
+//     for (let j = 1; j <= 5; j++) {
+//         console.log(`Pushups ${j}`);
+//     }
+// }
+
+// Task 1: Reverse String(The Backwards Loop)
+//     Ek array banao const letters = ['t', 'p', 'i', 'r', 'c', 's', 'a', 'v', 'a', 'j'].
+//     Is array ko ulta(backward) loop chala kar print karo taake console mein "javascript" ke spelling sahi nazar aayein(j, a, v, a...).
+// const letters = ['t', 'p', 'i', 'r', 'c', 's', 'a', 'v', 'a', 'j'];
+// const favouriteLanguage = [];
+// for (let i = letters.length - 1; i >= 0; i--) {
+//     console.log(letters[i]);
+//     favouriteLanguage.push(letters[i]);
+// }
+// console.log(favouriteLanguage);
+
+// Task 2: Nested Loops (The Multiplication Table 1 to 3)
+//     Do loops use karo.
+//     Bahar wala loop 1 se 3 tak chale.
+//     Andar wala loop 1 se 10 tak chale.
+//     Console mein 1, 2, aur 3 ka table print karo.
+//     Example: 1 * 1 = 1, 1 * 2 = 2... phir 2 * 1 = 2...
+// for (let i = 1; i <= 3; i++) {
+//     console.log(`---- Table of ${i} -----`);
+//     for (let j = 1; j <= 10; j++) {
+//         console.log(`1 * ${j} = ${j}`)
+//     }
+//     for (let j = 1; j <= 10; j++) {
+//         console.log(`2 * ${j} = ${j + (j + 1)}`)
+//     }
+//     for (let j = 1; j <= 10; j++) {
+//         console.log(`3 * ${j} = ${j + (j + 2)}`)
+//     }
+// }
+
+// Task 3: Pattern Challenge(Stars)
+//     Do loops use karke ye pattern console mein print karo: * ** *** ****
+//     Hint: Andar wale loop ki condition bahar wale loop ke variable par depend karegi(e.g., j <= i). 
+// for (let i = 0; i < 10; i++) {
+//     for (let j = "*"; j < 10; j + "*") {
+//         console.log("*")
+//     }
+// }
+
+// Task 4: Array in Array (Nested Data)
+//     Ek array banao const foodMenu = [['Biryani', 'Pulao'], ['Burger', 'Pizza'], ['Kheer', 'Halwa']].
+//     Pehla loop categories (Desi, Fast Food, Dessert) ke liye chalao.
+//     Andar wala loop har category ke andar ke items print kare.
+// const foodMenu = [["Biryani", "Pulao"], ["Burger", "Pizza"], ["Kheer", "Halwa"]];
+// const categories = ["Desi", "Fast Food", "Desert"];
+// for (let i = 0; i < categories.length; i++) {
+//     console.log(`------${categories[i]}-------`);
+//     for (let j = 0; j < foodMenu.length; j++) {
+//         console.log(foodMenu[i]);
+//     }
 // }
