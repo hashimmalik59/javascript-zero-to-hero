@@ -649,26 +649,78 @@ function fruitProcessors(apple, orange) {
 
 // TEST DATA: Marks weighs 78 kg and is 1.69 m tall. John weighs 92 kg and is 1.95 m tall.
 
-const mark = {
-    fullName: "Mark Miller's",
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.bmi = this.mass / (this.height ** 2);
-        return this.bmi;
-    }
-};
-const john = {
-    fullName: "John Smith's",
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.bmi = this.mass / (this.height ** 2);
-        return this.bmi
-    }
-};
-if (john.calcBMI > mark.calcBMI) {
-    console.log(`${john.fullName} BMI (${john.calcBMI().toFixed(1)}) is higher than ${mark.fullName} (${mark.calcBMI().toFixed(1)})!`);
-} else {
-    console.log(`${mark.fullName} BMI (${mark.calcBMI().toFixed(1)}) is higher than ${john.fullName} (${john.calcBMI().toFixed(1)})!`);
-}
+// const mark = {
+//     fullName: "Mark Miller's",
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.bmi = this.mass / (this.height ** 2);
+//         return this.bmi;
+//     }
+// };
+// const john = {
+//     fullName: "John Smith's",
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.bmi = this.mass / (this.height ** 2);
+//         return this.bmi
+//     }
+// };
+// if (john.calcBMI > mark.calcBMI) {
+//     console.log(`${john.fullName} BMI (${john.calcBMI().toFixed(1)}) is higher than ${mark.fullName} (${mark.calcBMI().toFixed(1)})!`);
+// } else {
+//     console.log(`${mark.fullName} BMI (${mark.calcBMI().toFixed(1)}) is higher than ${john.fullName} (${john.calcBMI().toFixed(1)})!`);
+// }
+
+// Iteration the for loop
+
+// console.log("Exercise repitition 1");
+// console.log("Exercise repitition 2");
+// console.log("Exercise repitition 3");
+// console.log("Exercise repitition 4");
+// console.log("Exercise repitition 5");
+// console.log("Exercise repitition 6");
+// console.log("Exercise repitition 7");
+// console.log("Exercise repitition 8");
+// console.log("Exercise repitition 9");
+// console.log("Exercise repitition 10");
+
+// for (let rep = 1; rep <= 10; rep++) {
+//     console.log(`Exercise repitition ${rep}`);
+// }
+
+// Task 1: The Counter
+//     Ek loop banao jo 1 se 20 tak ginti print kare.
+//     Twist: Ginti sirf Even Numbers (2, 4, 6...) ki honi chahiye. (Hint: i++ ki jagah i += 2 use karo).
+// for (let num = 0; num <= 20; num += 2) {
+//     console.log(`${num} is a even number!`);
+// }
+
+// Task 2: Array Multiplication
+//     Ek array banao numbers = [2, 4, 6, 8, 10].
+//     Loop use karke har number ko 2 se multiply karke console mein dikhao.
+//     Example Output: 4, 8, 12, 16, 20
+// const numbers = [2, 4, 6, 8, 10];
+// for (let i = 0; i < numbers.length; i++) {
+//     console.log(numbers[i] * 2);
+// }
+
+// Task 3: Logic Builder (The Breakup)
+//     Ek array banao data = ['Apple', 'Banana', 'Orange', 'STOP', 'Mango'].
+//     Loop chalao aur items print karo, lekin jaise hi loop ko 'STOP' mile, loop band ho jana chahiye. (Hint: break keyword ka use socho jo Jonas ne bataya tha).
+// const data = ["Apple", "Banana", "Orange", "STOP", "Mango"];
+// for (let i = 0; i < data.length; i++) {
+//     if (data[i] === "STOP") {
+//         console.log(data[i]);
+//         break;
+//     } else {
+//         console.log(data[i]);
+//     }
+// }
+
+// Task 4: Reverse Counting
+//     Ek loop banao jo 10 se 1 tak ulthi ginti print kare. (Hint: Shuruat 10 se karo, condition i >= 1 rakho, aur i-- karo).
+// for (let i = 10; i >= 1; i--) {
+//     console.log(i);
+// }
