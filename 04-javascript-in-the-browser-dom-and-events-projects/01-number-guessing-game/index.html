@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Number Guessing Game</title>
+</head>
+<style>
+    html,
+    body {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+
+<body>
+    <div
+        class="container bg-gray-800 text-gray-200 rounded-2xl py-10 flex flex-col justify-center items-center border gap-5">
+        <div class="flex items-center gap-100 text-4xl px-10 py-5">
+            <button class="reset font-bold text-5xl bg-white text-gray-800 p-4">Again!</button>
+            <p class="font-bold text-5xl">Between 1 to 20</p>
+        </div>
+        <h1 class="text-7xl font-bold">Guess my number</h1>
+        <span
+            class="correct text-6xl font-extrabold bg-white text-gray-800 w-[100px] h-[100px] flex justify-center items-center text-center">?</span>
+        <div class="flex gap-100 items-center">
+            <div class="flex flex-col gap-5">
+                <input type="number" class="border-2 border-gray-200 px-5 text-[100px] font-bold h-[20vh] w-[15vw]">
+                <button class="check bg-white text-gray-800 font-bold py-5 text-5xl">Check!</button>
+            </div>
+            <div class="flex flex-col gap-10 text-gray-200 font-bold">
+                <p class="message text-4xl">Start guessing...</p>
+                <p class="score text-4xl">Score: 20</p>
+                <p class="highscore text-4xl">Highscore: 0</p>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
