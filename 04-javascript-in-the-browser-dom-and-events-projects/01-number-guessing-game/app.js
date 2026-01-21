@@ -27,17 +27,25 @@ checkButton.addEventListener("click", () => {
             userScore.textContent = `Score: ${score}`;
             message.textContent = "Invalid number...";
             input.style.border = "4px solid red";
-            message.style.color = "red";
+            message.style.color = "red"
         } else if (score < 1) {
             userScore.textContent = "Game over...";
+            message.style.color = 'white'
             checkButton.style.opacity = ".5";
             container.style.backgroundColor = "red";
             message.textContent = "You lose...";
+            message.style.color = "white"
+            input.style.border = "2px solid white";
         }
         else if (input.value > secretNumber) {
             message.textContent = "Too High";
+            message.style.color = "white"
+            input.style.border = "2px solid white";
+
         } else {
             message.textContent = "Too Low";
+            message.style.color = "white"
+            input.style.border = "2px solid white";
         }
     }
 })
