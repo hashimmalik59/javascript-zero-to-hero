@@ -16,36 +16,42 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        background-color: #1f2937;
+        /* Gray-800 jaisa bg taake container mix na ho */
     }
 </style>
 <style type="text/tailwindcss">
     @theme {
-    --font-press-start: "Press Start 2P", cursive;
-  }
+        --font-press-start: "Press Start 2P", cursive;
+    }
 </style>
 
 <body class="font-press-start">
     <div
-        class="container h-[90vh] w-[90vw] bg-gray-800 text-gray-200 rounded-2xl py-10 flex flex-col justify-center items-center border">
-        <div class="flex items-center gap-100 px-10 py-5">
-            <button class="reset font-bold text-2xl bg-white text-gray-800 p-4">Again!</button>
-            <p class="font-bold text-3xl">Between 1 to 20</p>
+        class="container min-h-[90vh] w-[95vw] md:w-full max-w-4xl bg-gray-800 text-gray-200 rounded-2xl py-10 flex flex-col justify-center items-center border border-gray-600 gap-5">
+
+        <div class="flex flex-row items-center justify-between md:gap-40 w-full px-6 md:px-10 py-5">
+            <button class="reset font-bold text-sm md:text-2xl bg-white text-gray-800 p-2 md:p-4">Again!</button>
+            <p class="font-bold text-[10px] md:text-3xl">Between 1 to 20</p>
         </div>
-        <div class="flex flex-col items-center gap-10">
-            <h1 class="text-[40px] font-bold">Guess my number</h1>
+
+        <div class="flex flex-col items-center gap-6 md:gap-10">
+            <h1 class="text-xl md:text-[40px] font-bold text-center">Guess my number</h1>
             <span
-                class="correct text-6xl font-extrabold bg-white text-gray-800 w-[100px] h-[100px] flex justify-center items-center text-center p-10">?</span>
+                class="correct text-4xl md:text-6xl font-extrabold bg-white text-gray-800 w-20 h-20 md:w-[100px] md:h-[100px] flex justify-center items-center text-center p-5 md:p-10">?</span>
         </div>
-        <div class="flex gap-100 items-center">
+
+        <div class="flex flex-col md:flex-row gap-10 md:gap-40 items-center mt-10">
             <div class="flex flex-col gap-5">
                 <input type="number"
-                    class="border-2 border-gray-200 px-5 text-6xl text-center font-bold h-[20vh] w-[15vw]">
-                <button class="check bg-white text-gray-800 font-bold py-5 text-2xl">Check!</button>
+                    class="border-2 border-gray-200 px-5 text-4xl md:text-6xl text-center font-bold h-20 md:h-[20vh] w-40 md:w-[15vw] bg-transparent">
+                <button class="check bg-white text-gray-800 font-bold py-3 md:py-5 text-xl md:text-2xl">Check!</button>
             </div>
-            <div class="flex flex-col gap-10 text-gray-200 font-bold">
-                <p class="message text-2xl">Start guessing...</p>
-                <p class="score text-2xl">Score: 20</p>
-                <p class="highscore text-2xl">Highscore: 0</p>
+
+            <div class="flex flex-col gap-6 md:gap-10 text-gray-200 font-bold text-center md:text-left">
+                <p class="message text-lg md:text-2xl">Start guessing...</p>
+                <p class="score text-lg md:text-2xl">Score: 20</p>
+                <p class="highscore text-lg md:text-2xl">Highscore: 0</p>
             </div>
         </div>
     </div>
