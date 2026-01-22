@@ -5,9 +5,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Modal Window</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
+    <div class="container">
+        <div class="button-parent">
+            <button class="show-modal">Show Modal 1</button>
+            <button class="show-modal">Show Modal 2</button>
+            <button class="show-modal">Show Modal 3</button>
+        </div>
+        <!-- Pop-up -->
+        <div class="modal hidden">
+            <div>
+                <h1>Modal</h1> <span class="close">X</span>
+            </div>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum minima dignissimos nihil quo ex animi?
+                Vel quae laudantium nobis ducimus suscipit commodi nihil aliquam deserunt optio nulla consequuntur ullam
+                ratione impedit quaerat tenetur necessitatibus sed, quisquam aliquid debitis. Reprehenderit amet est
+                dignissimos delectus quam perspiciatis accusantium adipisci nisi ducimus officiis.</p>
+        </div>
+        <!--Overlay  -->
+        <div class="overlay hidden"></div>
+    </div>
     <script src="app.js"></script>
 </body>
 
