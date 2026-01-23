@@ -128,3 +128,10 @@ body {
     display: none;
     opacity: 0;
 }
+
+@media screen and (max-width: 600px) {
+    .button-parent {
+        display: flex;
+        flex-direction: column;
+    }
+}
