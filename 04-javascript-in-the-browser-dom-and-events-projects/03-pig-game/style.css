@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Poppins, sans-serif;
+    box-sizing: border-box;
+    font-weight: 100;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 16px;
+    background-image: linear-gradient(to top left, #753682 0%, #bf2e34 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    height: 75%;
+    width: 60%;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.container .player {
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+}
+
+#player1 {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px 0 0 10px;
+}
+
+#player2 {
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 0 10px 10px 0;
+}
+
+.dice-score {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.dice-score h1 {
+    color: #212121;
+    font-size: 2.8rem;
+}
+
+.dice-score span {
+    font-size: 4rem;
+    color: #bf2e34;
+}
+
+.current-score {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.current-score span {
+    font-size: xx-large;
+}
+
+#player1 .current-score {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 20vh;
+    background-color: #bf2e34;
+}
+
+#player2 .current-score {
+    display: flex;
+    flex-direction: column;
+    width: 15vw;
+    height: 20vh;
+    background-color: #bf2e34;
+}
+
+.logic-button {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 75px;
+}
+
+.logic-button div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.logic-button button {
+    cursor: pointer;
+    text-transform: uppercase;
+    background-color: #fff;
+    color: #212121;
+    border-radius: 40px;
+    border: none;
+    height: fit-content;
+    width: fit-content;
+    padding: .2rem 1.25rem;
+    font-size: 1.1rem;
+    box-shadow: 0 0 50px #5e5e5e;
+    transition: all .1s;
+}
+
+.logic:hover {
+    transform: scale(1.1);
+}
+
+.hidden {
+    visibility: hidden;
+}
