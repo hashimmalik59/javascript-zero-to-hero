@@ -25,6 +25,7 @@ body {
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
+    box-shadow: 0 0 50px #212121;
 }
 
 .container .player {
@@ -37,14 +38,28 @@ body {
     gap: 80px;
 }
 
-#player1 {
+
+.player0,
+.player1 {
+    background-color: rgba(255, 255, 255, 0.25);
+    transition: all 0.4s ease;
+}
+
+.player0.player-active,
+.player1.player-active {
     background-color: rgba(255, 255, 255, 0.5);
+}
+
+.player0 {
     border-radius: 10px 0 0 10px;
 }
 
-#player2 {
-    background-color: rgba(255, 255, 255, 0.25);
+.player1 {
     border-radius: 0 10px 10px 0;
+}
+
+.player-winner {
+    background-color: #212121;
 }
 
 .dice-score {
@@ -55,7 +70,7 @@ body {
 }
 
 .dice-score h1 {
-    color: #212121;
+    color: #000;
     font-size: 2.8rem;
 }
 
@@ -78,15 +93,7 @@ body {
     font-size: xx-large;
 }
 
-#player1 .current-score {
-    display: flex;
-    flex-direction: column;
-    width: 15vw;
-    height: 20vh;
-    background-color: #bf2e34;
-}
-
-#player2 .current-score {
+.player .current-score {
     display: flex;
     flex-direction: column;
     width: 15vw;
@@ -99,7 +106,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 75px;
+    gap: 50px;
 }
 
 .logic-button div {
