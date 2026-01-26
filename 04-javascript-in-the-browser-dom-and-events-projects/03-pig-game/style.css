@@ -15,17 +15,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+    /* Screen se bahar kuch na jaye */
 }
 
 .container {
     height: 75%;
-    width: 60%;
+    width: 65%;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-transform: uppercase;
     box-shadow: 0 0 50px #212121;
+    position: relative;
 }
 
 .container .player {
@@ -37,7 +40,6 @@ body {
     justify-content: center;
     gap: 80px;
 }
-
 
 .player0,
 .player1 {
@@ -79,26 +81,25 @@ body {
     color: #bf2e34;
 }
 
-.current-score {
-    display: flex;
-    gap: 10px;
-    justify-content: center;
-    align-items: center;
-    font-size: 10px;
-    color: #fff;
-    border-radius: 10px;
-}
-
-.current-score span {
-    font-size: xx-large;
-}
-
 .player .current-score {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 15vw;
     height: 20vh;
     background-color: #bf2e34;
+    color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.current-score p {
+    font-size: 1.2rem;
+}
+
+.current-score span {
+    font-size: 2.5rem;
 }
 
 .logic-button {
@@ -107,6 +108,7 @@ body {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    z-index: 10;
 }
 
 .logic-button div {
@@ -124,18 +126,101 @@ body {
     color: #212121;
     border-radius: 40px;
     border: none;
-    height: fit-content;
-    width: fit-content;
-    padding: .2rem 1.25rem;
+    padding: .5rem 1.5rem;
     font-size: 1.1rem;
-    box-shadow: 0 0 50px #5e5e5e;
-    transition: all .1s;
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
+    transition: all .2s;
 }
 
-.logic:hover {
-    transform: scale(1.1);
+.logic-button button:hover {
+    transform: scale(1.05);
+}
+
+img {
+    width: 100px;
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
 }
 
 .hidden {
     visibility: hidden;
+}
+
+/* =========================================
+   GPA SAVER: MOBILE RESPONSIVE (NO SCROLL)
+   ========================================= */
+@media screen and (max-width: 768px) {
+    .container {
+        width: 98%;
+        height: 70%;
+        box-shadow: 0 0 20px #212121;
+    }
+
+    .container .player {
+        gap: 25px;
+        /* Spacing kam ki taake overlap na ho */
+    }
+
+    .dice-score h1 {
+        font-size: 1.4rem;
+    }
+
+    .dice-score span {
+        font-size: 2.5rem;
+    }
+
+    /* Current Box: Mobile Specific Fix */
+    .player .current-score {
+        width: 110px !important;
+        height: 75px !important;
+        padding: 5px;
+    }
+
+    .current-score p {
+        font-size: 10px;
+        margin-bottom: 2px;
+    }
+
+    .current-score span {
+        font-size: 1.5rem;
+    }
+
+    .logic-button {
+        gap: 20px;
+    }
+
+    .logic-button button {
+        font-size: 0.8rem;
+        padding: 0.4rem 1rem;
+    }
+
+    img {
+        width: 50px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .container {
+        height: 40%;
+        font-weight: bolder;
+    }
+
+    .container .player {
+        gap: 15px;
+    }
+
+    .logic-button button {
+        padding: 5px 10px;
+    }
+
+    .dice-score h1 {
+        font-size: 1.1rem;
+    }
+
+    .dice-score span {
+        font-size: 2rem;
+    }
+
+    .player .current-score h1 {
+        font-size: .75rem;
+    }
 }
