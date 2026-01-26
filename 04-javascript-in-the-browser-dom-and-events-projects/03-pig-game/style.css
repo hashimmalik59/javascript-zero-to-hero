@@ -94,12 +94,12 @@ body {
     padding: 10px;
 }
 
-.current-score p {
-    font-size: 1.2rem;
+.current-score h1 {
+    font-size: 2rem;
 }
 
 .current-score span {
-    font-size: 2.5rem;
+    font-size: 3rem;
 }
 
 .logic-button {
@@ -149,6 +149,12 @@ img {
    GPA SAVER: MOBILE RESPONSIVE (NO SCROLL)
    ========================================= */
 @media screen and (max-width: 768px) {
+
+    /* Pure mobile layout ke liye default weight barha diya */
+    * {
+        font-weight: 400 !important;
+    }
+
     .container {
         width: 98%;
         height: 70%;
@@ -157,31 +163,38 @@ img {
 
     .container .player {
         gap: 25px;
-        /* Spacing kam ki taake overlap na ho */
     }
 
     .dice-score h1 {
         font-size: 1.4rem;
+        font-weight: 400 !important;
+        /* Player Name bold */
     }
 
     .dice-score span {
         font-size: 2.5rem;
+        font-weight: 400 !important;
+        /* Main Score extra bold */
     }
 
-    /* Current Box: Mobile Specific Fix */
+    /* Current Box Fixes */
     .player .current-score {
         width: 110px !important;
         height: 75px !important;
         padding: 5px;
     }
 
-    .current-score p {
-        font-size: 10px;
+    .current-score h1 {
+        /* 'Current' label */
+        font-size: 12px !important;
+        font-weight: 400 !important;
         margin-bottom: 2px;
     }
 
     .current-score span {
-        font-size: 1.5rem;
+        /* Current Score number */
+        font-size: 1.5rem !important;
+        font-weight: 400 !important;
     }
 
     .logic-button {
@@ -191,6 +204,8 @@ img {
     .logic-button button {
         font-size: 0.8rem;
         padding: 0.4rem 1rem;
+        font-weight: 400 !important;
+        /* Buttons readable ho gaye */
     }
 
     img {
@@ -200,8 +215,8 @@ img {
 
 @media screen and (max-width: 480px) {
     .container {
-        height: 40%;
-        font-weight: bolder;
+        height: 55%;
+        /* Thori height barhai taake text fit aaye */
     }
 
     .container .player {
@@ -209,7 +224,7 @@ img {
     }
 
     .logic-button button {
-        padding: 5px 10px;
+        padding: 5px 12px;
     }
 
     .dice-score h1 {
@@ -221,6 +236,6 @@ img {
     }
 
     .player .current-score h1 {
-        font-size: .75rem;
+        font-size: 10px !important;
     }
 }
