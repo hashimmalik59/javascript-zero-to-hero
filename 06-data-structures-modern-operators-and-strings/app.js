@@ -229,7 +229,7 @@ const restaurant = {
     }
 };
 
-restaurant.orderPizza("Chicken", "Olives", "Cheese", "Bread");
+// restaurant.orderPizza("Chicken", "Olives", "Cheese", "Bread");
 
 
 // Array
@@ -250,10 +250,59 @@ const add = function (...num) {
     }
     // console.log(sum);
 }
-add(1);
-add(1, 2);
-add(1, 2, 3);
-add(1, 2, 3, 4);
-add(1, 2, 3, 4, 5);
+// add(1);
+// add(1, 2);
+// add(1, 2, 3);
+// add(1, 2, 3, 4);
+// add(1, 2, 3, 4, 5);
 const x = [7, 5, 9];
-add(...x);
+// add(...x);
+
+// Short Circuting (&& and ||)
+
+// console.log("------ OR -------");
+
+// USe any datatype, return any datatype, short circuting
+// console.log(4 || "Hashim");
+// console.log("" || "Malik");
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(null || undefined);
+// console.log(undefined || 0 || "" || "Hello" || 23 || null);
+
+
+restaurant.numGuests = 23;
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guest1);
+
+const guest2 = restaurant.numGuests || 23
+// console.log(guest2);
+
+// console.log("------ AND -------");
+// console.log("Hashim" && "");
+// console.log(false && 0);
+// console.log(undefined && null);
+// console.log("Hello" && 23 && "Hashim" && null && "Malik");
+
+if (restaurant.orderPizza) {
+    // restaurant.orderPizza("Mushroom", "Cheese", "Olives");
+}
+
+// Agar pehli value Truthy hai, toh doosri check hi nahi hogi
+// console.log(3 || 'Hashim'); // 3
+// console.log('' || 'Guest'); // 'Guest' (Kyunki empty string falsy hai)
+// console.log(true || 0);     // true
+
+const guests = 0;
+const guestCount = guests || 10;
+// console.log(guestCount); // 10 (Lekin yahan ek bug hai, 0 ko bhi falsy maana gaya)
+
+// Agar pehli value Falsy hai, toh aage nahi jayega
+// console.log(0 && 'Hashim'); // 0
+// console.log(7 && 'Ali');    // 'Ali' (Kyunki 7 truthy hai, toh aage check kiya)
+
+// Real world use:
+const user = { name: 'Hashim', loggedIn: true };
+
+// Agar loggedIn true hai, tabhi aage wala kaam karo
+// user.loggedIn && console.log('Welcome User!');
