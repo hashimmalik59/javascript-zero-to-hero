@@ -319,11 +319,43 @@ const guest2 = restaurant.numGuests ?? 23
 // console.log(null ?? undefined);
 // console.log(undefined ?? null);
 
-console.log(0 ?? "");
-console.log("" ?? 0);
-console.log(10 ?? 0);
-console.log("" ?? 10);
-console.log("Hashim" || 0);
-console.log("Hashim" || "");
-console.log(true ?? false);
-console.log(false ?? true);
+// console.log(0 ?? "");
+// console.log("" ?? 0);
+// console.log(10 ?? 0);
+// console.log("" ?? 10);
+// console.log("Hashim" || 0);
+// console.log("Hashim" || "");
+// console.log(true ?? false);
+// console.log(false ?? true);
+
+// let speed = 0;
+
+// OR (||) operator use kiya
+// let check1 = speed || 50; 
+// console.log(check1); // Output: 50 
+// (Ghalti! Speed 0 thi, lekin isne 50 kar di kyunki iske liye 0 kachra hai)
+
+// Nullish (??) operator use kiya
+// let check2 = speed ?? 50;
+// console.log(check2); // Output: 0 
+// (Sahi! Isne 0 ko izzat di aur usay change nahi kiya)
+
+// Looping Ojbect, Object keys, values, and entries
+
+const myData = {
+    firstName: "Hashim",
+    lastName: "Malik",
+    age: 23,
+    isStudent: true,
+    profession: "Developer"
+};
+
+for (const myValues of Object.entries(myData)) {
+    // console.log(myValues);
+}
+
+const entry = Object.entries(restaurant.openingHours);
+
+for (const [day, { open, close }] of entry) {
+    // console.log(`On ${day}, open at ${open} and close at ${close}. `);
+}
