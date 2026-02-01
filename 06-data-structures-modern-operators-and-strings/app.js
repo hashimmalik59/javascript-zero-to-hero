@@ -342,20 +342,72 @@ const guest2 = restaurant.numGuests ?? 23
 
 // Looping Ojbect, Object keys, values, and entries
 
+// const myData = {
+//     firstName: "Hashim",
+//     lastName: "Malik",
+//     age: 23,
+//     isStudent: true,
+//     profession: "Developer"
+// };
+
+// for (const myValues of Object.entries(myData)) {
+// console.log(myValues);
+// }
+
+// const entry = Object.entries(restaurant.openingHours);
+
+// for (const [day, { open, close }] of entry) {
+// console.log(`On ${day}, open at ${open} and close at ${close}. `);
+// }
+
+// Optional Chaninig
+
 const myData = {
     firstName: "Hashim",
     lastName: "Malik",
     age: 23,
     isStudent: true,
-    profession: "Developer"
+    skill: {
+        profession: "Frontend Developer",
+        // framework: ["TaiwlwindCSS", "ReactJS"],
+    }
 };
 
-for (const myValues of Object.entries(myData)) {
-    // console.log(myValues);
+// console.log(myData.skill?.framework);
+// console.log(myData.skill.framework);
+
+// console.log(myData.city.location);
+// console.log(myData.city?.location);
+
+// if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
+
+const days = [
+    "mon",
+    "tue",
+    "wed",
+    "thur",
+    "fri",
+    "sat",
+    "sun"
+]
+
+for (const day of days) {
+    const open = restaurant.openingHours[day]?.open ?? "Closed";
+    // console.log(`On ${day}, we open at ${open}`);
 }
 
-const entry = Object.entries(restaurant.openingHours);
+// console.log(restaurant.order(0, 1) ?? "Method does not exist");
 
-for (const [day, { open, close }] of entry) {
-    // console.log(`On ${day}, open at ${open} and close at ${close}. `);
-}
+// console.log(restaurant.orderBiryani?.(0, 1) ?? "Method does not exist");
+
+// const userData = [{
+//     name: "Hashim",
+//     age: 23
+// }];
+
+const userData = [];
+
+console.log(userData[0]?.name ?? "Name is empty");
+
+if (userData.length > 0) console.log(userData[0].name);
+else console.log("Name is empty");
