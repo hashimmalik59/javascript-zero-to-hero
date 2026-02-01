@@ -270,12 +270,11 @@ const x = [7, 5, 9];
 // console.log(null || undefined);
 // console.log(undefined || 0 || "" || "Hello" || 23 || null);
 
-
-restaurant.numGuests = 23;
-const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// restaurant.numGuests = 23;
+// const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
 // console.log(guest1);
 
-const guest2 = restaurant.numGuests || 23
+// const guest2 = restaurant.numGuests || 23
 // console.log(guest2);
 
 // console.log("------ AND -------");
@@ -306,3 +305,25 @@ const user = { name: 'Hashim', loggedIn: true };
 
 // Agar loggedIn true hai, tabhi aage wala kaam karo
 // user.loggedIn && console.log('Welcome User!');
+
+// Nuliish Coalscing Operator
+
+restaurant.numGuests = 0;
+const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// console.log(guest1);
+
+// Nullish values: null & undefined
+const guest2 = restaurant.numGuests ?? 23
+// console.log(guest2);
+
+// console.log(null ?? undefined);
+// console.log(undefined ?? null);
+
+console.log(0 ?? "");
+console.log("" ?? 0);
+console.log(10 ?? 0);
+console.log("" ?? 10);
+console.log("Hashim" || 0);
+console.log("Hashim" || "");
+console.log(true ?? false);
+console.log(false ?? true);
