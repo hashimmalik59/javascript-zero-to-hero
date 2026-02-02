@@ -463,6 +463,182 @@ const restaurant = {
     }
 };
 
-console.log(restaurant);
-console.log(restaurant.openingHours);
-console.log(openingHours);
+// console.log(restaurant);
+// console.log(restaurant.openingHours);
+// console.log(openingHours);
+
+// String Part 1
+
+// const airplane = 'TAP air Pakistan';
+// const plane = "A786";
+
+// console.log(plane[0]);
+// console.log(plane[1]);
+// console.log(plane[2]);
+// console.log(plane[3]);
+// console.log("PAK"[0]);
+
+// Finding the length of string
+// console.log(plane.length);
+// console.log("Pak".length);
+
+// console.log(airplane.indexOf("s"));
+// console.log(airplane.lastIndexOf("s"));
+// console.log(airplane.indexOf("pakistan"));
+
+// last index is exclusive
+// console.log(airplane.slice(8, 11));
+// console.log(airplane.slice(0, airplane.indexOf(" ")));
+// console.log(airplane.slice(airplane.lastIndexOf(" ") + 1));
+
+// console.log(airplane.slice(0, -5));
+
+// const checkMiddleSeat = function (seat) {
+// B and E seats are middle seats
+//     const seatPlace = seat.slice(-1);
+//     if (seatPlace === "B" || seatPlace === "E")
+//         console.log("You are sit on middle");
+//     else console.log("You are not sit on middle");
+// }
+// checkMiddleSeat("11A");
+// checkMiddleSeat("20E");
+// checkMiddleSeat("15C");
+// checkMiddleSeat("18B");
+
+// Because of 'new' keyword its moved to object
+// console.log(new String("Hashim"));
+// console.log(typeof new String("Hashim"));
+
+// console.log(typeof new String("Hashim").slice(-1));
+
+// String Part 2
+
+const airplane = 'TAP air Pakistan';
+const plane = "A786";
+
+// console.log(airplane.toLowerCase());
+// console.log(airplane.toUpperCase());
+
+// console.log("Hashim".toLowerCase());
+
+// Fixing name case-sensitivity
+const checkPassengerName = function (name) {
+    // console.log(`Before ${name}`);
+    const passengerLower = name.toLowerCase();
+    const passengerCorrect = passengerLower[0].toUpperCase() + passengerLower.slice(1);
+    return passengerCorrect;
+}
+// const correctName = checkPassengerName("haShIm");
+// console.log(`After ${correctName}`);
+
+// Comparing email
+
+const userEmail = "hashimmalik59@gmail.com";
+const emailCorrector = function (email) {
+    console.log("Before", email);
+    const lowerEmail = email.toLowerCase();
+    const noSpaceEmail = lowerEmail.trim();
+    return noSpaceEmail;
+}
+// const correctEmail = emailCorrector("     hasHiMmalik59@GmaIL.coM");
+// console.log("After", correctEmail);
+
+// console.log(userEmail === correctEmail); // true
+
+// Repalcing Method
+const pricePKR = "999,9PKR";;
+
+// replace(), replace only(one) first element
+const priceUS = pricePKR.replace("PKR", "US").replace(",", ".")
+// console.log(priceUS);
+
+const announcement = "All passengers come to boarding  door 23. Boarding door 23!";
+
+// console.log(announcement.replace("door", "gate"));
+
+// replaceAll(), replace all elements 
+// console.log(announcement.replaceAll("door", "gate"));
+
+// g/ => means g => global
+// console.log(announcement.replace(/door/g, "gate"));
+
+const planeNumber = "Air A320neo";
+
+// console.log(planeNumber.includes("A320"));
+// console.log(planeNumber.includes("Apple"));
+// console.log(planeNumber.includes(" "));
+
+// console.log(planeNumber.startsWith("Air"));
+// console.log(planeNumber.startsWith("AiA"));
+
+if (planeNumber.startsWith("Air") && planeNumber.endsWith("neo")) {
+    // console.log("The plane is Air & Neo family");
+} else {
+    console.log("The plane is not Air & Neo family");
+}
+
+
+const checkAllowed = function (item) {
+    const userItem = item.toLowerCase();
+    if (userItem.includes("knife") || userItem.includes("gun")) {
+        console.log(`Not allowed because of weapon!`);
+    } else {
+        console.log(`Welcome on Board!`);
+    }
+}
+// checkAllowed("I have a Gun for protection");
+// checkAllowed("Socks for wearing because too cold");
+// checkAllowed("I have a Knife for muder");
+
+// console.log("My+name+is+hashim".split("+"));
+// console.log("Hashim Ahmad Malik".split(" "));
+
+const [firstName, middleName, lastName] = "Hashim Ahmad Malik".split(" ");
+
+// console.log(firstName);
+// console.log(lastName);
+// console.log(middleName);
+
+// console.log(["Mr.", firstName, lastName.toUpperCase()].join(" "));
+
+
+// Capitalized Name
+const capitalizedName = function (name) {
+    const names = name.split(" ");
+    const upperNames = [];
+    for (const naam of names) {
+        // upperNames.push(naam[0].toUpperCase() + naam.slice(1));
+        upperNames.push(naam.replace(naam[0], naam[0].toUpperCase()));
+    }
+    console.log(upperNames);
+}
+// capitalizedName("hashim ahmad malik");
+// capitalizedName("ali khan zia");
+
+const message = "Go to gate 23";
+
+// console.log(message.padStart(20, "!"));
+// console.log(message.padEnd(20, "!"));
+// console.log(message.padStart(20, "!").padEnd("5", "!"));
+
+const maskCreditCard = function (number) {
+    const str = number + "";
+    const last = str.slice(-4);
+    return last.padStart(str.length, "*");
+}
+// console.log(maskCreditCard(6452589));
+// console.log(maskCreditCard(645295789846));
+// console.log(maskCreditCard(6452589089089046));
+
+// Repeat method
+const message2 = "Delayed...Bad Weather...";
+console.log(message2.repeat(2));
+
+const message3 = "...Aloo le lo...";
+console.log(message3.repeat(3));
+
+
+const planesInLine = function (numberOfPlanes) {
+    console.log(`${numberOfPlanes} plane is in the line.`)
+}
+planesInLine(5);
