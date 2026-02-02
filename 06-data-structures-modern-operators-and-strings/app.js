@@ -632,13 +632,38 @@ const maskCreditCard = function (number) {
 
 // Repeat method
 const message2 = "Delayed...Bad Weather...";
-console.log(message2.repeat(2));
+// console.log(message2.repeat(2));
 
 const message3 = "...Aloo le lo...";
-console.log(message3.repeat(3));
+// console.log(message3.repeat(3));
 
 
 const planesInLine = function (numberOfPlanes) {
     console.log(`${numberOfPlanes} plane is in the line.`)
 }
-planesInLine(5);
+// planesInLine(5);
+
+// Challenge # 4
+
+const camelCase = function (text) {
+    console.log("Before", text);
+    // Text into lower case
+    let lowerText = text.toLowerCase();
+    // Removing white spaces
+    let trimText = lowerText.trim();
+    if (trimText.includes("_")) {
+        // Dividing text into an array
+        let textArr = trimText.split("_");
+        // Getting first word
+        let firstWord = textArr[0];
+        // Getting second word
+        let secondWord = textArr[1];
+        // Second word first letter in to upper case
+        let firstLetter = secondWord[0].toUpperCase();
+        // Final text
+        let correctText = firstWord + firstLetter + secondWord.slice(1);
+        return correctText;
+    }
+}
+const result = camelCase("underscore_case\n first_name\nSome_Variable");
+console.log("After", result);
