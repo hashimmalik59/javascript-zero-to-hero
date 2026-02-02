@@ -190,72 +190,72 @@ const [num1, num2, ...otherNums] = [1, 2, 3, 4, 5, 6];
 otherNums.push(7);
 // console.log(otherNums);
 
-const restaurant = {
-    name: "Classic Italiano",
-    location: "Via Angelo Tavanti 23, Firenze, Italy",
-    categories: ["Italian", "Pizzeria", "Vegetarian", "Oraganic"],
-    starterMenu: ["Focaccia", "Bruschetta", "Garlic", "Bread", "Caprese Salad"],
-    mainMenu: ["Pizza", "Pasta", "Risotto"],
-    openingHours: {
-        thu: {
-            open: 12,
-            close: 22,
-        },
-        fri: {
-            open: 11,
-            close: 23,
-        },
-        sat: {
-            open: 0, // open 24 hours
-            close: 24,
-        },
-    },
+// const restaurant = {
+//     name: "Classic Italiano",
+//     location: "Via Angelo Tavanti 23, Firenze, Italy",
+//     categories: ["Italian", "Pizzeria", "Vegetarian", "Oraganic"],
+//     starterMenu: ["Focaccia", "Bruschetta", "Garlic", "Bread", "Caprese Salad"],
+//     mainMenu: ["Pizza", "Pasta", "Risotto"],
+//     openingHours: {
+//         thu: {
+//             open: 12,
+//             close: 22,
+//         },
+//         fri: {
+//             open: 11,
+//             close: 23,
+//         },
+//         sat: {
+//             open: 0, // open 24 hours
+//             close: 24,
+//         },
+//     },
 
-    order: function (starterIndex, menuIndex) {
-        return [this.starterMenu[starterIndex], this.mainMenu[menuIndex]];
-    },
+//     order: function (starterIndex, menuIndex) {
+//         return [this.starterMenu[starterIndex], this.mainMenu[menuIndex]];
+//     },
 
-    orderDelivery: function (starterIndex, mainIndex, time, address) {
-        console.log(`Order time ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`)
-    },
+//     orderDelivery: function (starterIndex, mainIndex, time, address) {
+//         console.log(`Order time ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`)
+//     },
 
-    orderPasta: function (ing1, ing2, ing3) {
-        console.log(`Here are your deliciious pasta with ${ing1}, ${ing2}, and ${ing3}`);
-    },
+//     orderPasta: function (ing1, ing2, ing3) {
+//         console.log(`Here are your deliciious pasta with ${ing1}, ${ing2}, and ${ing3}`);
+//     },
 
-    orderPizza: function (mainIngredients, ...otherIngredients) {
-        console.log(mainIngredients);
-        console.log(otherIngredients);
-    }
-};
+//     orderPizza: function (mainIngredients, ...otherIngredients) {
+//         console.log(mainIngredients);
+//         console.log(otherIngredients);
+//     }
+// };
 
 // restaurant.orderPizza("Chicken", "Olives", "Cheese", "Bread");
 
 
 // Array
-const [pizza, , risotto, otherMenu] = [
-    ...restaurant.starterMenu,
-    ...restaurant.mainMenu,
-]
+// const [pizza, , risotto, otherMenu] = [
+//     ...restaurant.starterMenu,
+//     ...restaurant.mainMenu,
+// ]
 // console.log(pizza, risotto, otherMenu);
 
 // Object
-const { sat, ...weekdays } = restaurant.openingHours
+// const { sat, ...weekdays } = restaurant.openingHours
 // console.log(weekdays);
 
-const add = function (...num) {
-    let sum = 0;
-    for (let i = 0; i < num.length; i++) {
-        sum += num[i];
-    }
-    // console.log(sum);
-}
+// const add = function (...num) {
+// let sum = 0;
+// for (let i = 0; i < num.length; i++) {
+// sum += num[i];
+// }
+// console.log(sum);
+// }
 // add(1);
 // add(1, 2);
 // add(1, 2, 3);
 // add(1, 2, 3, 4);
 // add(1, 2, 3, 4, 5);
-const x = [7, 5, 9];
+// const x = [7, 5, 9];
 // add(...x);
 
 // Short Circuting (&& and ||)
@@ -283,17 +283,17 @@ const x = [7, 5, 9];
 // console.log(undefined && null);
 // console.log("Hello" && 23 && "Hashim" && null && "Malik");
 
-if (restaurant.orderPizza) {
-    // restaurant.orderPizza("Mushroom", "Cheese", "Olives");
-}
+// if (restaurant.orderPizza) {
+// restaurant.orderPizza("Mushroom", "Cheese", "Olives");
+// }
 
 // Agar pehli value Truthy hai, toh doosri check hi nahi hogi
 // console.log(3 || 'Hashim'); // 3
 // console.log('' || 'Guest'); // 'Guest' (Kyunki empty string falsy hai)
 // console.log(true || 0);     // true
 
-const guests = 0;
-const guestCount = guests || 10;
+// const guests = 0;
+// const guestCount = guests || 10;
 // console.log(guestCount); // 10 (Lekin yahan ek bug hai, 0 ko bhi falsy maana gaya)
 
 // Agar pehli value Falsy hai, toh aage nahi jayega
@@ -301,19 +301,19 @@ const guestCount = guests || 10;
 // console.log(7 && 'Ali');    // 'Ali' (Kyunki 7 truthy hai, toh aage check kiya)
 
 // Real world use:
-const user = { name: 'Hashim', loggedIn: true };
+// const user = { name: 'Hashim', loggedIn: true };
 
 // Agar loggedIn true hai, tabhi aage wala kaam karo
 // user.loggedIn && console.log('Welcome User!');
 
 // Nuliish Coalscing Operator
 
-restaurant.numGuests = 0;
-const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
+// restaurant.numGuests = 0;
+// const guest1 = restaurant.numGuests ? restaurant.numGuests : 10;
 // console.log(guest1);
 
 // Nullish values: null & undefined
-const guest2 = restaurant.numGuests ?? 23
+// const guest2 = restaurant.numGuests ?? 23
 // console.log(guest2);
 
 // console.log(null ?? undefined);
@@ -362,16 +362,16 @@ const guest2 = restaurant.numGuests ?? 23
 
 // Optional Chaninig
 
-const myData = {
-    firstName: "Hashim",
-    lastName: "Malik",
-    age: 23,
-    isStudent: true,
-    skill: {
-        profession: "Frontend Developer",
-        // framework: ["TaiwlwindCSS", "ReactJS"],
-    }
-};
+// const myData = {
+// firstName: "Hashim",
+// lastName: "Malik",
+// age: 23,
+// isStudent: true,
+// skill: {
+// profession: "Frontend Developer",
+// framework: ["TaiwlwindCSS", "ReactJS"],
+// }
+// };
 
 // console.log(myData.skill?.framework);
 // console.log(myData.skill.framework);
@@ -381,20 +381,20 @@ const myData = {
 
 // if (restaurant.openingHours.fri) console.log(restaurant.openingHours.fri.open);
 
-const days = [
-    "mon",
-    "tue",
-    "wed",
-    "thur",
-    "fri",
-    "sat",
-    "sun"
-]
+// const days = [
+//     "mon",
+//     "tue",
+//     "wed",
+//     "thur",
+//     "fri",
+//     "sat",
+//     "sun"
+// ]
 
-for (const day of days) {
-    const open = restaurant.openingHours[day]?.open ?? "Closed";
-    // console.log(`On ${day}, we open at ${open}`);
-}
+// for (const day of days) {
+// const open = restaurant.openingHours[day]?.open ?? "Closed";
+// console.log(`On ${day}, we open at ${open}`);
+// }
 
 // console.log(restaurant.order(0, 1) ?? "Method does not exist");
 
@@ -405,9 +405,64 @@ for (const day of days) {
 //     age: 23
 // }];
 
-const userData = [];
+// const userData = [];
 
-console.log(userData[0]?.name ?? "Name is empty");
+// console.log(userData[0]?.name ?? "Name is empty");
 
-if (userData.length > 0) console.log(userData[0].name);
-else console.log("Name is empty");
+// if (userData.length > 0) console.log(userData[0].name);
+// else console.log("Name is empty");
+
+// Enhanced Object Literals
+
+const weekDays = ['mon', 'tue', 'wed', 'thu', 'fri', 'sat', 'sun'];
+
+const openingHours = {
+    [weekDays[3]]: {
+        open: 12,
+        close: 22,
+    },
+    [weekDays[4]]: {
+        open: 11,
+        close: 23,
+    },
+    [`day_${2 + 4}`]: {
+        open: 0, // open 24 hours
+        close: 24,
+    },
+};
+
+const restaurant = {
+    name: "Classic Italiano",
+    location: "Via Angelo Tavanti 23, Firenze, Italy",
+    categories: ["Italian", "Pizzeria", "Vegetarian", "Oraganic"],
+    starterMenu: ["Focaccia", "Bruschetta", "Garlic", "Bread", "Caprese Salad"],
+    mainMenu: ["Pizza", "Pasta", "Risotto"],
+
+    // Ehanced Object Literals
+    openingHours,
+
+    // Enhanced Object Literals function
+    order(starterIndex, menuIndex) {
+        return [this.starterMenu[starterIndex], this.mainMenu[menuIndex]];
+    },
+
+    // Enhanced Object Literals function
+    orderDelivery(starterIndex, mainIndex, time, address) {
+        console.log(`Order time ${this.openingHours[time]} ${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]}`)
+    },
+
+    // Enhanced Object Literals function
+    orderPasta(ing1, ing2, ing3) {
+        console.log(`Here are your deliciious pasta with ${ing1}, ${ing2}, and ${ing3}`);
+    },
+
+    // Enhanced Object Literals function
+    orderPizza(mainIngredients, ...otherIngredients) {
+        console.log(mainIngredients);
+        console.log(otherIngredients);
+    }
+};
+
+console.log(restaurant);
+console.log(restaurant.openingHours);
+console.log(openingHours);
