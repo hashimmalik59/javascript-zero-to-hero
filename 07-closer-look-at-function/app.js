@@ -15,7 +15,53 @@ const createBooking = function (flight = "LH123", numberOfPassengers = 3, price 
     console.log(booking);
     booking.push(bookings);
 }
-createBooking();
-createBooking("ABC123");
-createBooking("ABC123", 40);
-createBooking("ABC123", 50, 200);
+// createBooking();
+// createBooking("ABC123");
+// createBooking("ABC123", 40);
+// createBooking("ABC123", 50, 200);
+
+// Passing arguments works, Value vs Reference
+
+const flight = "LH123";
+
+const hashim = {
+    name: "Hashim Malik",
+    passport: 5435235357,
+}
+
+const checkIn = function (flightNum, passenger) {
+    flightNum = flight;
+    passenger.name = "Mr " + passenger.name;
+
+    if (hashim.passport === 5435235357) {
+        alert("Check In");
+    } else {
+        alert("Wrong passport!");
+    }
+}
+
+// checkIn(flight, hashim.passenger);
+
+// console.log(flight);
+// console.log(passenger);
+
+const flightNum = flight;
+const passenger = hashim;
+
+const newPassport = function (person) {
+    person.passport = Math.trunc(Math.random() * 10000000);
+}
+// newPassport(hashim);
+// checkIn(flight, hashim);
+
+let passportName = "Hashim Malik";
+
+const checkPassport = function (name) {
+    name = "Mr. " + name; // Humne yahan 'name' ko badla
+    console.log("Function ke andar:", name);
+};
+
+// checkPassport(passportName); // "Mr. Hashim Malik"
+
+// console.log("Function ke bahar asli variable:", passportName);
+// Output: "Hashim Malik" (Asli wala nahi badla!)
