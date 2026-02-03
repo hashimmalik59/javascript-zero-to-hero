@@ -87,8 +87,8 @@ const transformer = function (str, func) {
     console.log("Transformed String", func(str));
     console.log("Transformed by", func.name);
 }
-transformer("JavaScript is a Fun", upperFirstWord);
-transformer("JavaScript is a Fun", oneWord);
+// transformer("JavaScript is a Fun", upperFirstWord);
+// transformer("JavaScript is a Fun", oneWord);
 
 // Callback function
 const high5 = function () {
@@ -96,4 +96,27 @@ const high5 = function () {
 };
 
 document.body.addEventListener('click', high5);
-["Hashim", "Ahmad", "Malik"].forEach(high5);
+// ["Hashim", "Ahmad", "Malik"].forEach(high5);
+
+// Function retruning function
+
+const greet = function (greeting) {
+    return function (name) {
+        console.log(`${greeting} ${name}`);
+    }
+}
+
+const greeting = greet("Hi");
+greeting("Hashim");
+greeting("Malik");
+
+// const greet2 = greeting => {
+// return name => console.log(`${greeting} ${name}`);
+// }
+// greet2("Hi")("Hashim");
+
+const greet2 = greeting => name => console.log(`${greeting} ${name}`);
+
+// const greeting2 = greet2("Hi");
+// greeting2("Hashim");
+// greeting2("Malik");
