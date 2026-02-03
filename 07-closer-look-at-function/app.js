@@ -65,3 +65,35 @@ const checkPassport = function (name) {
 
 // console.log("Function ke bahar asli variable:", passportName);
 // Output: "Hashim Malik" (Asli wala nahi badla!)
+
+// Functions accepting callback functions
+
+const oneWord = function (str) {
+    console.log("Before", str);
+    return str.replace(/ /g, "").toLowerCase();
+}
+
+// const result = oneWord(" HashiM   ");
+// console.log("After", result);
+
+const upperFirstWord = function (str) {
+    const [first, ...others] = str.split(" ");
+    return [first.toUpperCase(), ...others].join(" ");
+}
+
+// Higher-order function
+const transformer = function (str, func) {
+    console.log("Original String", str);
+    console.log("Transformed String", func(str));
+    console.log("Transformed by", func.name);
+}
+transformer("JavaScript is a Fun", upperFirstWord);
+transformer("JavaScript is a Fun", oneWord);
+
+// Callback function
+const high5 = function () {
+    console.log("Hi");
+};
+
+document.body.addEventListener('click', high5);
+["Hashim", "Ahmad", "Malik"].forEach(high5);
