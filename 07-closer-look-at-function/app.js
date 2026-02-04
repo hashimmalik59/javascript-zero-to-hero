@@ -107,8 +107,8 @@ const greet = function (greeting) {
 }
 
 const greeting = greet("Hi");
-greeting("Hashim");
-greeting("Malik");
+// greeting("Hashim");
+// greeting("Malik");
 
 // const greet2 = greeting => {
 // return name => console.log(`${greeting} ${name}`);
@@ -145,6 +145,47 @@ const secureBooking = function () {
 
 const booker = secureBooking();
 
-booker();
-booker();
-booker();
+// booker();
+// booker();
+// booker();
+
+// More closures examples
+
+let f;
+
+const g = function () {
+    const a = 23;
+    f = function () {
+        console.log(a * 2);
+    };
+};
+
+const d = function () {
+    const b = 25;
+    f = function () {
+        console.log(b * 2);
+    };
+};
+
+g();
+f();
+console.dir(f);
+
+// reassign f function
+d();
+f();
+console.dir(f);
+
+const boardPassenger = function (n, wait) {
+    const perGroup = n / 3;
+
+    setTimeout(function () {
+        console.log(`We are now boarding all ${n} passengers`);
+        console.log(`There are 3 groups, each with ${perGroup} passenger`);
+    }, 1000);
+
+    console.log(`Will start building in ${wait}
+        seconds`);
+};
+
+boardPassenger(3, 10);
