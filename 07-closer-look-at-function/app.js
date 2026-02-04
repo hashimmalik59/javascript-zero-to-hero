@@ -120,3 +120,31 @@ const greet2 = greeting => name => console.log(`${greeting} ${name}`);
 // const greeting2 = greet2("Hi");
 // greeting2("Hashim");
 // greeting2("Malik");
+
+// Closures
+
+// const secureBooking = function () {
+//     let passenger = 0;
+// 
+//     return function () {
+//         passenger++;
+//         console.log(passenger);
+//     };
+// };
+// secureBooking();
+// Note: the inner function is never run, due to it is not stored in a variable
+
+const secureBooking = function () {
+    let passenger = 0;
+
+    return function () {
+        passenger++;
+        console.log(passenger);
+    }
+}
+
+const booker = secureBooking();
+
+booker();
+booker();
+booker();
