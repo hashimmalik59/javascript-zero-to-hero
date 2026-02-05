@@ -95,3 +95,91 @@ const newFruits = fruits.map(function (fruit) {
 
 // console.log(fruits);
 // console.log(newFruits);
+
+// 🟢 Level 1: The Basic Filter (Selection)
+// Task: Tumhare paas numbers ka ek array hai. filter use karo aur sirf wo numbers nikaalo jo Even (Juft) hain.
+//     Input: const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+//     Goal: [2, 4, 6, 8, 10]
+//     Hint: num % 2 === 0 check karo.
+
+const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const evenNums = nums.filter(num => num % 2 === 0);
+
+// console.log(nums);
+// console.log(evenNums);
+
+// 🟡 Level 2: Real-World Inventory (Data Cleaning)
+// Task: Ek e-commerce site ke liye products filter karo. Sirf wo products dikhao jo "In Stock" hain (yani jin ki quantity 0 se zyada hai).
+//     Input:
+//     JavaScript
+// const inventory = [
+//   { name: 'iPhone', quantity: 5 },
+//   { name: 'Macbook', quantity: 0 },
+//   { name: 'Airpods', quantity: 12 },
+//   { name: 'Charger', quantity: 0 }
+// ];
+// Goal: [{ name: 'iPhone', quantity: 5 }, { name: 'Airpods', quantity: 12 }]
+// Hint: item.quantity > 0 return karo.
+
+const inventory = [
+    { name: 'iPhone', quantity: 5 },
+    { name: 'Macbook', quantity: 0 },
+    { name: 'Airpods', quantity: 12 },
+    { name: 'Charger', quantity: 0 }
+];
+
+const newStock = inventory.filter((item) => {
+    return item.quantity > 0;
+});
+
+// console.log(inventory.quantity);
+// console.log(newStock);
+
+// 🔴 Level 3: The Search Logic(String Matching)
+// Task: Socho tum ek search bar bana rahe ho.Tumhare paas names ki list hai.Sirf wo names filter karo jin mein letter "a" aata ho.
+//     Input: const friends = ['Hashim', 'Bilal', 'Zayn', 'John', 'Musa'];
+// Goal: ['Hashim', 'Bilal', 'Zayn', 'Musa'](John nikal jayega kyunki usmein 'a' nahi hai).
+//     Hint: .includes('a') ya.toLowerCase().includes('a') use karo.
+
+const friends = ['Hashim', 'Bilal', 'Zayn', 'John', 'Musa'];
+
+const letterA = friends.filter(function (a) {
+    return a.includes("a");
+});
+
+// console.log(friends);
+// console.log(letterA);
+
+// 📝 Pro Challenge (Map + Filter Combo!) 🚀
+// Challenge: Ye real project wala sawal hai. Tumhare paas bank transactions hain.
+//     Pehle sirf Deposits (positive numbers) filter karo.
+//     Phir un deposits par Interest (5%) add karke unhe badal (map) do.
+//     Input: const transactions = [-200, 500, -100, 1000, 3000, -50];
+//     Final Output: [525, 1050, 3150]
+//     Hint: Pehle .filter() lagao, phir uske foran baad .map() jorr do (Chaining).
+
+const transactions = [-200, 500, -100, 1000, 3000, -50];
+
+const newTransactions = transactions.filter(value => value > 0).map(value => (value * .05) + value);
+
+// console.log(transactions);
+// console.log(newTransactions);
+
+// Array: const ages = [12, 18, 22, 15, 30, 45, 10];
+// Task: Ek naya array banao adults jo sirf un logon ko rakhe jin ki age 18 ya 18 se zyada hai.
+// Advanced Task: Ek array lo ['apple', 'banana', 'apricot', 'orange'] aur sirf wo fruits filter karo jo 'a' se shuru hote hain (Hint: str.startsWith('a')).
+
+const ages = [12, 18, 22, 15, 30, 45, 10];
+
+const adults = ages.filter((age) => age >= 18);
+
+// console.log(ages);
+// console.log(adults);
+
+const fruit = ["apple", "banana", "apricot", "orange"];
+
+const fruitA = fruit.filter((a) => a[0] === "a");
+
+// console.log(fruit);
+// console.log(fruitA);
