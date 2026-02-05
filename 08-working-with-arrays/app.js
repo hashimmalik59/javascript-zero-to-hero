@@ -96,6 +96,8 @@ const newFruits = fruits.map(function (fruit) {
 // console.log(fruits);
 // console.log(newFruits);
 
+// filter method
+
 // 🟢 Level 1: The Basic Filter (Selection)
 // Task: Tumhare paas numbers ka ek array hai. filter use karo aur sirf wo numbers nikaalo jo Even (Juft) hain.
 //     Input: const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
@@ -183,3 +185,31 @@ const fruitA = fruit.filter((a) => a[0] === "a");
 
 // console.log(fruit);
 // console.log(fruitA);
+
+// reduce method
+
+// 🟢 Task 1: Total Expenses
+// Tumhare paas mahine ke kharchon (expenses) ka array hai. Unka total nikalo.
+//     Input: const expenses = [500, 1200, 300, 4500];
+//     Initial Value: 0
+//     Expected Output: 6500
+
+const expenses = [500, 1200, 300, 4500];
+
+const total = expenses.reduce((acc, currVal) => acc + currVal, 0);
+
+// console.log(expenses);
+// console.log(total);
+
+// 🟡 Task 2: Maximum Value(Dimaag lagao!)
+// reduce ko use karke array mein se sabse bara number dhoondo.
+//     Input: const scores = [45, 89, 23, 98, 55];
+// Hint: Accumulator mein wo number rakho jo ab tak "Sabse Bara" mila hai.Har step par check karo: acc > cur ? acc : cur.
+//     Initial Value: scores[0](Pehla number).
+
+const scores = [45, 89, 23, 98, 55];
+
+const maximumValue = scores.reduce((acc, currVal) => acc > currVal ? acc : currVal, 0);
+
+// console.log(scores);
+// console.log(maximumValue);
