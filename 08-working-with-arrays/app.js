@@ -213,3 +213,19 @@ const maximumValue = scores.reduce((acc, currVal) => acc > currVal ? acc : currV
 
 // console.log(scores);
 // console.log(maximumValue);
+
+// Task 1(Sum): Aik array banao[5, 10, 15, 20] aur reduce se iska total sum nikal kar dikhao.
+//     Task 2(Maximum Value): Isi array[5, 10, 15, 20] par reduce chalao aur dhoondo ke sabse Bara(Max) number konsa hai.
+//         Hint: acc ko check karo, agar cur > acc toh cur return karo, warna acc return karo.
+
+const number = [5, 10, 15, 20];
+
+const newNumbers = number.reduce((acc, cur) => acc + cur, 0);
+
+// console.log(number);
+// console.log(newNumbers);
+
+const maxVal = number.reduce((acc, cur) => acc > cur ? acc : cur, 0);
+
+// console.log(number);
+// console.log(maxVal)
