@@ -284,7 +284,7 @@ const newPoint = points.find(item => item > 100);
 // 🟢 Level 1: Pehla fail grade (< 50)
 const grade = [85, 92, 44, 78, 30, 95];
 const firstFail = grade.find((item) => item < 50);
-console.log(firstFail); // 44
+// console.log(firstFail); // 44
 
 // 🟡 Level 2: 'malik123' wala user dhoondo
 const user = [
@@ -293,9 +293,60 @@ const user = [
     { id: 3, username: 'malik123' }
 ];
 const newUsers = user.find(item => item.username === "malik123");
-console.log(newUsers); // "malik123"
+// console.log(newUsers); // { id:3, username: "malik123" }
 
 // 🔴 Level 3: 100 se bara number dhoondo
 const point = [10, 25, 50, 80];
 const notFound = point.find((item) => item > 100);
-console.log(notFound); // undefined
+// console.log(notFound); // undefined
+
+// findIndex method
+
+// 🟢 Level 1: The "Where is it?" Task
+// Scenario: Tumhare paas prices ka array hai.Tumne dhoondna hai ke wo pehli price kis position(index) par hai jo exactly 100 hai.
+//     Input: const prices = [50, 80, 100, 150, 200];
+// Goal: Result 2 aana chahiye.
+//     Hint: price === 100 use karo.
+
+const price = [50, 80, 100, 150, 200];
+const thirdIndex = price.findIndex(item => item === 100);
+
+// console.log(price);
+// console.log(thirdIndex); // 2
+
+// 🟡 Level 2: Finding a Specific User ID
+// Scenario: Tum ek admin ho aur tumhe ek user ko block karna hai jiski ID 502 hai. Pehle tumhe uska index dhoondna hoga.
+//     Input:
+//     JavaScript
+//     const users = [
+//       { id: 101, name: 'Ali' },
+//       { id: 502, name: 'Zain' },
+//       { id: 305, name: 'Sara' }
+//     ];
+//     Goal: Result 1 aana chahiye.
+//     Hint: u.id === 502 check karo.
+
+const usersID = [
+    { id: 101, name: 'Ali' },
+    { id: 502, name: 'Zain' },
+    { id: 305, name: 'Sara' }
+];
+
+const blockID = usersID.findIndex((item) => item.id === 502);
+
+// console.log(usersID);
+// console.log(blockID); // 1
+
+// 🔴 Level 3: The "Out of Stock" Case
+// Scenario: Tum ek item dhoond rahe ho jo array mein hai hi nahi.Dekho findIndex kya jawab deta hai.
+//     Input: const stock = ['Apple', 'Orange', 'Mango'];
+// Goal: Banana ka index dhoondo.
+//     Expected Result: -1
+// Hint: item === 'Banana'
+
+const stock = ['Apple', 'Orange', 'Mango'];
+
+const noStock = stock.findIndex((item) => item === "banana");
+
+// console.log(stock);
+// console.log(noStock); // -1
