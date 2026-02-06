@@ -350,3 +350,159 @@ const noStock = stock.findIndex((item) => item === "banana");
 
 // console.log(stock);
 // console.log(noStock); // -1
+
+// some method
+
+// Bhai, mere paas ek shopping cart hai: const cart = [500, 1200, 2100, 450];
+//     Code likho jo check kare ke: "Kya cart mein koi aisi item hai jiski price 2000 سے zyada hai?"
+//     Code likho jo check kare ke: "Kya cart mein koi aisi item hai jiski price exactly 100 hai?"(Dono some se karo).
+
+const cart = [500, 1200, 2100, 450];
+
+const priceAbove2000 = cart.some((item) => item > 2000);
+
+// console.log(cart);
+// console.log(priceAbove2000); // true
+
+const price1000 = cart.some(item => item === 100);
+
+// console.log(cart);
+// console.log(price1000); // false
+
+// Bhai, socho mere paas ek khali array hai: const empty = [];
+//     empty.some(x => x > 0) ka result kya hoga?
+//     empty.every(x => x > 0) ka result kya hoga?
+
+const empty = [];
+
+const newEmpty = empty.some(x => x > 0);
+
+// console.log(empty);
+// console.log(newEmpty);
+
+// 🟢 Level 1: Exam Results
+// Scenario: Ek student ke grades ka array hai. Aapne do cheezein check karni hain.
+//     Input: const grades = [60, 75, 45, 90, 82];
+//     Task A: Check karo kya kam az kam ek subject mein student fail hai (Fail < 50).
+//     Task B: Check karo kya student saare subjects mein pass hai (Pass >= 50).
+
+const score = [60, 75, 45, 90, 82];
+
+const newScore = score.some((subject) => subject < 50);
+
+// console.log(score);
+// console.log(newScore);
+
+// 🟡 Level 2: Password Validator
+// Scenario: Ek array mein password ki requirements hain (e.g., length, special characters, numbers). Maan lo hum sirf length check kar rahe hain.
+//     Input: const passwords = ['abc123', 'password', 'secure786', 'hi'];
+//     Task: Check karo kya saare passwords 3 characters se zyada baray hain?
+//     Goal: Result false aana chahiye kyunki 'hi' sirf 2 characters ka hai.
+
+const passwords = ['abc123', 'password', 'secure786', 'hi'];
+
+const passLength = passwords.some((item) => item > 3);
+
+// console.log(passwords);
+// console.log(passLength);
+
+// 🔴 Level 3: Grocery Store (The Mix)
+// Scenario: Aap ek store chala rahe ho. Aapke paas products ke objects hain.
+// JavaScript
+// const fruits = [
+//   { name: 'Apple', stock: 10 },
+//   { name: 'Orange', stock: 0 },
+//   { name: 'Mango', stock: 5 }
+// ];
+//     Task A: Kya store mein kuch fruits out of stock hain? (stock === 0)
+//     Task B: Kya store mein saare fruits ka stock 0 se zyada hai?
+
+const fruitsObj = [
+    { name: 'Apple', stock: 10 },
+    { name: 'Orange', stock: 0 },
+    { name: 'Mango', stock: 5 }
+];
+
+const stocks = fruitsObj.some((item) => item.stock === 0);
+
+const newStocks = fruitsObj.some((item) => item.stock < 0);
+
+// console.log(fruitsObj);
+// console.log(stocks);
+// console.log(newStocks);
+
+// every method
+
+// Level 1: Aapke paas ages hain: [18, 21, 25, 30, 19].Check karo kya sab ke sab adults(>= 18) hain ?
+//     Level 2: Aapke paas temperatures hain: [32, 35, 39, 41, 25].Check karo kya saare din mausam thanda tha ? (Thanda < 30).
+//         Level 3(Object): ```javascript const users = [ { name: 'Ali', hasPaid: true }, { name: 'Sana', hasPaid: true }, { name: 'Zain', hasPaid: false } ];
+// Check karo kya **sab users** ne fees pay kar di hai?
+
+const age = [18, 21, 25, 30, 19];
+
+const adult = ages.every((item) => item >= 18);
+
+// console.log(age);
+// console.log(adult);
+
+const temperature = [32, 35, 39, 41, 25];
+
+const cool = temperature.every(item => item < 30);
+
+// console.log(temperature);
+// console.log(cool);
+
+const userData = [{ name: 'Ali', hasPaid: true }, { name: 'Sana', hasPaid: true }, { name: 'Zain', hasPaid: true }];
+
+const userFee = userData.every(student => student.hasPaid);
+
+// console.log(userData);
+// console.log(userFee);
+
+// 🟢 Level 1: Age Verification
+// Scenario: Ek club mein entry ke liye zaroori hai ke saare dost 18 saal ya us se baray hon.
+//     Input: const groupAges = [18, 21, 25, 30, 19];
+//     Task: Check karo kya sab ke sab adults hain?
+//     Expected Result: true
+
+const groupAges = [18, 21, 25, 30, 19];
+
+const checkAdults = groupAges.every((age) => age >= 18);
+
+// console.log(groupAges);
+// console.log(checkAdults);
+
+// 🟡 Level 2: Weather Check
+// Scenario: Aapne check karna hai ke kya pura hafta mausam thanda raha ? (Thanda < 30).
+//     Input : const temps = [32, 35, 39, 41, 25];
+// Task: Check karo kya saare temperatures 30 se kam hain ?
+//     Expected Result: false(Kyunki sirf aakhri wala 30 se kam hai).
+
+const temps = [32, 35, 39, 41, 55];
+
+const isCold = temps.every((item) => item < 30);
+
+// console.log(temps);
+// console.log(isCold);
+
+// 🔴 Level 3: Fees Payment (The Object Task)
+// Scenario: Aap aik teacher ho aur aapne check karna hai ke kya poori class ne fees jama karwa di hai?
+// JavaScript
+// const students = [
+//   { name: 'Ali', hasPaid: true },
+//   { name: 'Sana', hasPaid: true },
+//   { name: 'Zain', hasPaid: false }
+// ];
+//     Task: Check karo kya hasPaid saare students ke liye true hai?
+//     Expected Result: false (Kyunki Zain ne pay nahi ki).
+
+const studentsObj = [
+    { name: 'Ali', hasPaid: true },
+    { name: 'Sana', hasPaid: true },
+    { name: 'Zain', hasPaid: false }
+];
+
+const studentsPay = studentsObj.every((item) => item.hasPaid === true);
+
+// console.log(studentsObj);
+// console.log(studentsPay);
