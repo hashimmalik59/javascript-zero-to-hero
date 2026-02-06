@@ -229,3 +229,73 @@ const maxVal = number.reduce((acc, cur) => acc > cur ? acc : cur, 0);
 
 // console.log(number);
 // console.log(maxVal)
+
+// find method
+
+// 🟢 Level 1: The First Occurrence
+// Task: Tumhare paas grades ka ek array hai. find use karke wo pehla grade dhoondo jo fail ho (yani 50 se kam ho).
+//     Input: const grades = [85, 92, 44, 78, 30, 95];
+//     Goal: 44 (Halaanke 30 bhi fail hai, lekin 44 pehle aaya hai).
+//     Hint: grade < 50 return karo.
+
+const grades = [85, 92, 44, 78, 30, 95];
+
+const newGrade = grades.find((item) => item < 50);
+
+// console.log(grades);
+// console.log(newGrade);
+
+// 🟡 Level 2: Finding a Specific Object(Important!)
+// Task: Tumhare paas users ka array hai.Wo user dhoondo jis ka username "malik123" hai.
+//     Input:
+// JavaScript
+// const users = [
+//     { id: 1, username: 'hashim_pro' },
+//     { id: 2, username: 'sara_dev' },
+//     { id: 3, username: 'malik123' }
+// ];
+// Goal: { id: 3, username: 'malik123' }
+// Hint: user.username === 'malik123' check karo.
+
+const users = [
+    { id: 1, username: 'hashim_pro' },
+    { id: 2, username: 'sara_dev' },
+    { id: 3, username: 'malik123' }
+];
+
+const newUser = users.find((item) => item.username === "malik123");
+
+// console.log(users);
+// console.log(newUser);
+
+// 🔴 Level 3: The "Not Found" Case
+// Task: Ek array mein se wo number dhoondo jo 100 se bara ho.Agar array mein aisa koi number na ho, toh console par check karo ke find kya return karta hai.
+//     Input: const points = [10, 25, 50, 80];
+// Goal: Dekho ke output undefined aata hai ya nahi.
+//     Hint: point > 100
+
+const points = [10, 25, 50, 80];
+
+const newPoint = points.find(item => item > 100);
+
+// console.log(points);
+// console.log(newPoint); // undefined
+
+// 🟢 Level 1: Pehla fail grade (< 50)
+const grade = [85, 92, 44, 78, 30, 95];
+const firstFail = grade.find((item) => item < 50);
+console.log(firstFail); // 44
+
+// 🟡 Level 2: 'malik123' wala user dhoondo
+const user = [
+    { id: 1, username: 'hashim_pro' },
+    { id: 2, username: 'sara_dev' },
+    { id: 3, username: 'malik123' }
+];
+const newUsers = user.find(item => item.username === "malik123");
+console.log(newUsers); // "malik123"
+
+// 🔴 Level 3: 100 se bara number dhoondo
+const point = [10, 25, 50, 80];
+const notFound = point.find((item) => item > 100);
+console.log(notFound); // undefined
