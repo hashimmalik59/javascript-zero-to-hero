@@ -506,3 +506,158 @@ const studentsPay = studentsObj.every((item) => item.hasPaid === true);
 
 // console.log(studentsObj);
 // console.log(studentsPay);
+
+// flat method
+
+const arr = [1, 2, 3, [4, 5, 6, [7, 8, 9, [10]]]];
+
+// console.log(arr);
+// console.log(arr.flat(1));
+// console.log(arr.flat(2));
+// console.log(arr.flat(3));
+// console.log(arr.flat(Infinity));
+
+// 🟢 Level 1: The Simple Merge
+// Scenario: Aapke paas do mukhtalif cities ki sales ka data hai jo alag alag arrays mein hai. Inhein aik hi list mein convert karo.
+//     Input: const sales = [[150, 200], [300, 450], [100, 500]];
+//     Task: Isay flat karo taake humein total sales ki aik hi array mil jaye.
+//     Expected Result: [150, 200, 300, 450, 100, 500]
+
+const sales = [[150, 200], [300, 450], [100, 500]];
+
+// console.log(sales);
+// console.log(sales.flat(1));
+
+// 🟡 Level 2: The Depth Challenge
+// Scenario: Aapke paas aik categories ka array hai jis mein sub-categories mazeed arrays ke andar hain.
+//     Input: const categories = ['Electronics', ['Mobile', ['iPhone', 'Samsung']], 'Clothing', ['Shirts', 'Jeans']];
+//     Task 1: Isay flat(1) kar ke dekho kya result aata hai.
+//     Task 2: Isay flat(2) kar ke dekho taake iPhone aur Samsung bhi bahar aa jayein.
+
+const categories = ['Electronics', ['Mobile', ['iPhone', 'Samsung']], 'Clothing', ['Shirts', 'Jeans']];
+
+// console.log(categories);
+// console.log(categories.flat(1));
+// console.log(categories.flat(2));
+
+// 🔴 Level 3: Cleanup the Empty Mess
+// Scenario: Kabhi kabhi array mein khali slots (empty items) reh jati hain. flat unhein khud hi saaf kar deta hai.
+//     Input: const messyArray = [1, 2, , 4, [5, , 6]];
+//     Task: Isay flat karo aur dekho kya empty slots gayab hoti hain?
+//     Hint: Bas .flat() use karo, ye khali jagahon ko bypass kar deta hai.
+
+const messyArray = [1, 2, , 4, [5, , 6]];
+
+// console.log(messyArray);
+// console.log(messyArray.flat(1));
+
+// flatMap method
+
+const accounts = [
+    { movements: [200, 450, -400] },
+    { movements: [500, 700, -100] }
+];
+
+const allMovesNested = accounts.map(acc => acc.movements);
+
+const allMovesFlat = allMovesNested.flat();
+
+// console.log(accounts);
+// console.log(allMovesNested);
+// console.log(allMovesFlat);
+
+const orders = [
+    { id: 1, items: ['Pizza', 'Burger'] },
+    { id: 2, items: ['Coke', 'Fries'] },
+    { id: 3, items: ['Cake'] }
+];
+
+// Task: flatMap use karke saare items ki aik single array banao.
+// Goal: ['Pizza', 'Burger', 'Coke', 'Fries', 'Cake']
+
+// Code likho aur batao: Kya flatMap use karte waqt hum depth bata sakte hain(jaise flat(2)) ?
+
+const itemArr = orders.map((item) => item.items);
+const itemArr2 = orders.flatMap((item) => item.items);
+
+// console.log(orders);
+// console.log(itemArr);
+// console.log(itemArr2);
+
+// Scenario: Aapke paas aik school ki classes ka data hai. Har class mein students ke naam ka array hai.
+// JavaScript
+// const school = [
+//   { class: 'A', students: ['Ali', 'Sana'] },
+//   { class: 'B', students: ['Zain', 'Abbas'] }
+// ];
+// Task: flatMap use karke saare students ki ek hi array banao.
+
+const school = [
+    { class: 'A', students: ['Ali', 'Sana'] },
+    { class: 'B', students: ['Zain', 'Abbas'] }
+];
+
+const newSchool = school.flatMap((item) => item.students);
+
+// console.log(school);
+// console.log(newSchool);
+
+// 🟢 Level 1: Tag Cloud
+// Scenario: Aap ek blog website bana rahe ho. Har post ke apne tags hain. Aapne saare tags ki aik single list banani hai taake "Trending Tags" dikha saken.
+//     Input:
+//     JavaScript
+// const posts = [
+//   { title: 'JS Tips', tags: ['coding', 'javascript'] },
+//   { title: 'Travel', tags: ['mountains', 'nature'] }
+// ];
+// Task: flatMap use kar ke saare tags ko ek hi array mein lao.
+// Expected Result: ['coding', 'javascript', 'mountains', 'nature']
+
+const posts = [
+    { title: "JS Tip", tags: ["coding", "javascript"] },
+    { title: "Travel", tags: ["mountains", "nature"] },
+]
+
+const trendingTags = posts.flatMap((item) => item.tags);
+
+// console.log(posts);
+// console.log(trendingTags);
+
+// 🟡 Level 2: Number Doubler(The Creative Way)
+// Scenario: flatMap sirf objects ke liye nahi hai.Ye array ka size badhane ke liye bhi use ho sakta hai.Agar aap aik number ke badle aik array return karein, toh flatMap usay khol dega.
+//     Input: const numbers = [1, 2, 3];
+// Task: numbers.flatMap(num => [num, num * 2]) likho aur dekho kya hota hai.
+//     Logic: Har number ke liye hum aik array return kar rahe hain[number, uska double].
+// Goal: Result aana chahiye[1, 2, 2, 4, 3, 6].
+
+const numArr = [1, 2, 3];
+
+const newNumArr = numArr.flatMap((item) => [item, item * 2]);
+
+// console.log(numArr);
+// console.log(newNumArr);
+
+// 🔴 Level 3: Inventory Management
+// Scenario: Ek store mein different boxes hain, aur har box mein items ki list hai.
+//     Input:
+//     JavaScript
+// const warehouse = [
+//   { boxId: 'A1', items: ['Laptop', 'Mouse'] },
+//   { boxId: 'B2', items: ['Keyboard', 'Monitor'] },
+//   { boxId: 'C3', items: [] } // Khali box
+// ];
+// Task: flatMap se saare items ki ek clean list banao.
+// Note: Dekho flatMap khali array [] ke sath kya karta hai (Spoiler: Wo usay gayab kar dega!).
+
+const warehouse = [
+    { boxId: 'A1', items: ['Laptop', 'Mouse'] },
+    { boxId: 'B2', items: ['Keyboard', 'Monitor'] },
+    { boxId: 'C3', items: [] } // Khali box
+];
+
+const newWarehouse = warehouse.flatMap((item) => {
+    return item.items;
+});
+
+// console.log(warehouse);
+// console.log(newWarehouse);
