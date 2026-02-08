@@ -24,9 +24,35 @@ setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 5000);
 
 const div = document.querySelector("div");
 
-
-
 div.addEventListener("mouseenter", () => {
     div.style.background = "red";
     console.log("Backgeound color is 'red'");
 });
+
+// 🟢 Practice Exercises(Types of Events & Handling)
+
+// Scenario 1: Input Mirror Ek input field hai.Jab user usmein kuch type kare (input event), toh console mein uska text print ho.
+//     JavaScript
+
+const input = document.querySelector(".test-input");
+
+input.addEventListener("input", (event) => {
+    console.log("User is typing:", event.target.value)
+})
+
+// Scenario 2: Background Changer Ek button par click event lagao jo poori body ka background color "yellow" kar de.
+//     JavaScript
+
+const chnageBGBtn = document.querySelector("button");
+chnageBGBtn.addEventListener("click", () => {
+    document.body.style.background = "blue";
+})
+
+// Scenario 3: Double Click Alert Ek image par dblclick event lagao jo alert dikhaye: "Image zoomed!".
+//     JavaScript
+
+const profile = document.querySelector("img");
+
+profile.addEventListener("dblclick", () => {
+    alert("Image Zoomed!");
+})
