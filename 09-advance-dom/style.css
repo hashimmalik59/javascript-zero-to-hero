@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins, sans-serif;
+}
+
+html,
+body {
+    height: 100px;
+    width: 100px;
+    font-size: 16px;
+}
+
+.bg-changer {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+}
+
+.propagate {
+    background-color: magenta;
+    height: 200px;
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.propagate button {
+    padding: 10px 20px;
+}
+
+.grandparent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 200px;
+    width: 200px;
+    background-color: red;
+    margin: 10px 0;
+}
+
+.grandparent .parent {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 150px;
+    width: 150px;
+    background-color: green;
+    margin: 10px 0;
+}
+
+.grandparent .parent .child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 125px;
+    width: 125px;
+    background-color: blue;
+    margin: 10px 0;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(21, 21, 21, .5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+
+.modal {
+    background-color: gray;
+    height: 300px;
+    width: 500px;
+    border-radius: 10px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 2;
+}
+
+.close-button {
+    height: 50px;
+    width: 50px;
+    float: right;
+    margin: 10px;
+    border-radius: 50%;
+    border: none;
+}
+
+.hide {
+    display: none;
+}
